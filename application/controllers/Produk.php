@@ -1,0 +1,147 @@
+<?php
+
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
+
+class Produk extends CI_Controller
+{
+    var $judul_page = 'Data Produk';
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Produk_model');
+        $this->load->library('form_validation');
+    }
+
+    public function index()
+    {
+        $produk = $this->Produk_model->get_all();
+
+        $data = array(
+            'produk_data' => $produk,
+            'judul_page' => $this->judul_page,
+            'konten' => 'produk/produk_list',
+        );
+        $this->load->view('v_index', $data);
+    }
+
+    
+
+    public function create() 
+    {
+        $data = array(
+            'judul_page' => $this->judul_page,
+            'konten' => 'produk/produk_form',
+            'judul_form' => 'Tambah '.$this->judul_page,
+            'button' => 'Simpan',
+            'action' => site_url('produk/create_action'),
+	    'id_produk' => set_value('id_produk'),
+	    'nama_produk' => set_value('nama_produk'),
+	    'deskripsi' => set_value('deskripsi'),
+	    'harga_beli' => set_value('harga_beli'),
+	    'harga_jual' => set_value('harga_jual'),
+	    'qty' => set_value('qty'),
+	);
+        $this->load->view('v_index', $data);
+    }
+    
+    public function create_action() 
+    {
+        $this->_rules();
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->create();
+        } else {
+            $data = array(
+		'nama_produk' => $this->input->post('nama_produk',TRUE),
+		'deskripsi' => $this->input->post('deskripsi',TRUE),
+		'harga_beli' => $this->input->post('harga_beli',TRUE),
+		'harga_jual' => $this->input->post('harga_jual',TRUE),
+		'qty' => $this->input->post('qty',TRUE),
+	    );
+
+            $this->Produk_model->insert($data);
+            $this->session->set_flashdata('message', message('success','Data berhasil disimpan'));
+            redirect(site_url('produk'));
+        }
+    }
+    
+    public function update($id) 
+    {
+        $row = $this->Produk_model->get_by_id($id);
+
+        if ($row) {
+            $data = array(
+                'judul_page' => $this->judul_page,
+                'konten' => 'produk/produk_form',
+                'judul_form' => 'Ubah '.$this->judul_page,
+                'button' => 'Update',
+                'action' => site_url('produk/update_action'),
+		'id_produk' => set_value('id_produk', $row->id_produk),
+		'nama_produk' => set_value('nama_produk', $row->nama_produk),
+		'deskripsi' => set_value('deskripsi', $row->deskripsi),
+		'harga_beli' => set_value('harga_beli', $row->harga_beli),
+		'harga_jual' => set_value('harga_jual', $row->harga_jual),
+		'qty' => set_value('qty', $row->qty),
+	    );
+            $this->load->view('v_index', $data);
+        } else {
+            $this->session->set_flashdata('message', message('danger','Data tidak ditemukan'));
+            redirect(site_url('produk'));
+        }
+    }
+    
+    public function update_action() 
+    {
+        $this->_rules();
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->update($this->input->post('id_produk', TRUE));
+        } else {
+            $data = array(
+		'nama_produk' => $this->input->post('nama_produk',TRUE),
+		'deskripsi' => $this->input->post('deskripsi',TRUE),
+		'harga_beli' => $this->input->post('harga_beli',TRUE),
+		'harga_jual' => $this->input->post('harga_jual',TRUE),
+		'qty' => $this->input->post('qty',TRUE),
+	    );
+
+            $this->Produk_model->update($this->input->post('id_produk', TRUE), $data);
+            $this->session->set_flashdata('message', message('success','Data berhasil diupdate'));
+            redirect(site_url('produk'));
+        }
+    }
+    
+    public function delete($id) 
+    {
+        $row = $this->Produk_model->get_by_id($id);
+
+        if ($row) {
+            $this->Produk_model->delete($id);
+            $this->session->set_flashdata('message', message('success','Data berhasil dihapus'));
+            redirect(site_url('produk'));
+        } else {
+            $this->session->set_flashdata('message', message('danger','Data tidak ditemukan'));
+            redirect(site_url('produk'));
+        }
+    }
+
+    public function _rules() 
+    {
+	$this->form_validation->set_rules('nama_produk', 'nama produk', 'trim|required');
+	$this->form_validation->set_rules('deskripsi', 'deskripsi', 'trim|required');
+	$this->form_validation->set_rules('harga_beli', 'harga beli', 'trim|required');
+	$this->form_validation->set_rules('harga_jual', 'harga jual', 'trim|required');
+	$this->form_validation->set_rules('qty', 'qty', 'trim|required');
+
+	$this->form_validation->set_rules('id_produk', 'id_produk', 'trim');
+	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
+    }
+
+}
+
+/* End of file Produk.php */
+/* Location: ./application/controllers/Produk.php */
+/* Please DO NOT modify this information : */
+/* Generated by Boy Kurniawan 2022-02-01 17:30:54 */
+/* https://jualkoding.com */
