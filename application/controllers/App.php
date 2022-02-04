@@ -8,12 +8,12 @@ class App extends CI_Controller {
      {
           if ($this->session->userdata('level') == '') {
                redirect('login');
-           }
+          }
           $data = array(
                'judul_page' => "Dashboard",
                'konten' => 'home/view',
-           );
-           $this->load->view('v_index', $data);
+          );
+          $this->load->view('v_index', $data);
      }
 
      public function dev()

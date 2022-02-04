@@ -1,10 +1,10 @@
 <div class="sidebar-wrapper" data-simplebar="true">
      <div class="sidebar-header">
           <div>
-               <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+               <img src="assets/logo.png" class="logo-icon" alt="logo icon">
           </div>
           <div>
-               <h4 class="logo-text">Rocker</h4>
+               <h4 class="logo-text">Glowza</h4>
           </div>
           <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
           </div>
@@ -13,7 +13,7 @@
      <ul class="metismenu" id="menu">
           <li class="menu-label">Main Menu</li>
           <li>
-               <a href="home">
+               <a href="app">
                     <div class="parent-icon"><i class='bx bx-home-circle'></i>
                     </div>
                     <div class="menu-title">Dashbord</div>
@@ -27,24 +27,31 @@
                </a>
           </li>
 		<li>
-               <a href="app/dev">
+               <a href="paket">
                     <div class="parent-icon"><i class='bx bx-movie'></i>
                     </div>
                     <div class="menu-title">Data Paket</div>
                </a>
           </li>
 		<li>
-               <a href="app/dev">
+               <a href="member">
                     <div class="parent-icon"><i class='bx bx-user-check'></i>
                     </div>
                     <div class="menu-title">Pendaftaran User</div>
                </a>
           </li>
 		<li>
-               <a href="app/dev">
+               <a href="reward">
                     <div class="parent-icon"><i class='bx bx-slider-alt'></i>
                     </div>
                     <div class="menu-title">Setting Reward</div>
+               </a>
+          </li>
+          <li>
+               <a href="app/dev">
+                    <div class="parent-icon"><i class='bx bx-cloud-download'></i>
+                    </div>
+                    <div class="menu-title">Klaim Reward</div>
                </a>
           </li>
 		<li>

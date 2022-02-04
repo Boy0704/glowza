@@ -7,7 +7,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <base href="<?php echo base_url() ?>">
      <!--favicon-->
-     <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+     <link rel="icon" href="assets/logo.png" type="image/png" />
      <!--plugins-->
      <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
      <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
@@ -32,13 +32,13 @@
                     <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                          <div class="col mx-auto">
                               <div class="mb-4 text-center">
-                                   <img src="assets/images/logo-img.png" width="180" alt="" />
+                                   <img src="assets/logo.png" width="180" alt="" />
                               </div>
                               <div class="card">
                                    <div class="card-body">
                                         <div class="border p-4 rounded">
                                              <div class="text-center">
-                                                  <h3 class="">Sign in</h3>
+                                                  <h3>Sign in</h3>
                                                   <p>
                                                        Silahkan Login disini.
                                                   </p>

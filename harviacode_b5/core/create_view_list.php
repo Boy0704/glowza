@@ -5,7 +5,7 @@ $string = "
             <div class=\"card-body\">
                 <div class=\"row mb-4\">
                     <div class=\"col\">
-                        <a href=\"produk/create\" class=\"btn btn-primary\"><i class=\"bx bx-plus mr-1\"></i>Tambah</a>
+                        <a href=\"".$c_url."/create\" class=\"btn btn-primary\"><i class=\"bx bx-plus mr-1\"></i>Tambah</a>
                     </div>
                 </div>
                 <div class=\"row mb-3\">
