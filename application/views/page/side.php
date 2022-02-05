@@ -4,9 +4,9 @@
                <img src="assets/logo.png" class="logo-icon" alt="logo icon">
           </div>
           <div>
-               <h4 class="logo-text">Glowza</h4>
+               <h4 class="logo-text" style="color: #CC9C27">Glowza</h4>
           </div>
-          <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
+          <div class="toggle-icon ms-auto" style="color: #CC9C27"><i class='bx bx-arrow-to-left'></i>
           </div>
      </div>
      <!--navigation-->
