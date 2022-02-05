@@ -16,6 +16,18 @@ class App extends CI_Controller {
           $this->load->view('v_index', $data);
      }
 
+     public function statistik_pengunjung()
+     {
+          if ($this->session->userdata('level') == '') {
+               redirect('login');
+          }
+          $data = array(
+               'judul_page' => "Statistik Pengunjung",
+               'konten' => 'pengunjung/view',
+          );
+          $this->load->view('v_index', $data);
+     }
+
      public function dev()
      {
           $this->session->set_flashdata('pesan', alert_biasa('Sedang dalam pengembangan','info'));

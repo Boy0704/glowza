@@ -13,6 +13,27 @@ class Reward extends CI_Controller
         $this->load->library('form_validation');
     }
 
+    public function klaim_reward()
+    {
+        $data = array(
+            'judul_page' => "Klaim Reward",
+            'konten' => 'reward/klaim_reward',
+        );
+        $this->load->view('v_index', $data);
+    }
+
+    public function approved($n, $id_klaim)
+    {
+        if ($n == 'y') {
+            $this->db->where('id_klaim', $id_klaim);
+            $this->db->update('klaim_reward', ['status'=>'approved', 'updated_at'=>get_waktu(), 'user_by'=>$this->session->userdata('id_user')]);
+            
+            $this->session->set_flashdata('message', message('success','Klaim Reward berhasil diapproved'));
+            redirect(site_url('reward/klaim_reward'));
+            
+        }
+    }
+
     public function index()
     {
         $reward = $this->Reward_model->get_all();

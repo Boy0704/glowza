@@ -48,14 +48,21 @@
                </a>
           </li>
           <li>
-               <a href="app/dev">
+               <a href="reward/klaim_reward">
                     <div class="parent-icon"><i class='bx bx-cloud-download'></i>
                     </div>
                     <div class="menu-title">Klaim Reward</div>
                </a>
           </li>
+          <li>
+               <a href="app/statistik_pengunjung">
+                    <div class="parent-icon"><i class='bx bx-line-chart-down'></i>
+                    </div>
+                    <div class="menu-title">Statistik Pengunjung</div>
+               </a>
+          </li>
 		<li>
-               <a href="app/dev">
+               <a href="app_user">
                     <div class="parent-icon"><i class='bx bx-user-circle'></i>
                     </div>
                     <div class="menu-title">Master User</div>
