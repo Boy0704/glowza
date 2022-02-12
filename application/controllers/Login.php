@@ -14,10 +14,15 @@ class Login extends CI_Controller {
      public function auth()
      {
           $username = $this->input->post('username');
-          $password = $this->input->post('password');
-          if ($username == 'joko' and $password == '12345678') {
-               $sess_data['username'] = "joko";
-               $sess_data['level'] = "superadmin";
+          $password = md5($this->input->post('password'));
+          $cek = $this->db->query("SELECT * FROM app_user WHERE username='$username' and password='$password' ");
+          
+          if ($cek->num_rows() > 0) {
+               $user = $cek->row();
+               $sess_data['username'] = $user->username;
+               $sess_data['nama'] = $user->nama_lengkap;
+               $sess_data['foto'] = $user->foto;
+               $sess_data['level'] = $user->level;
                $this->session->set_userdata($sess_data);
                redirect('app','refresh');
                
@@ -30,10 +35,12 @@ class Login extends CI_Controller {
 
      public function logout()
      {
-		$this->session->unset_userdata('username');
-		$this->session->unset_userdata('level');
-		session_destroy();
-		redirect('login','refresh');
+          $this->session->unset_userdata('username');
+          $this->session->unset_userdata('nama');
+          $this->session->unset_userdata('foto');
+          $this->session->unset_userdata('level');
+          session_destroy();
+          redirect('login','refresh');
      }
 
 }

@@ -58,7 +58,7 @@
                                                                  <input type="password"
                                                                       name="password"
                                                                       class="form-control border-end-0"
-                                                                      id="inputChoosePassword" value="12345678"
+                                                                      id="inputChoosePassword"
                                                                       placeholder="Enter Password"> <a
                                                                       href="javascript:;"
                                                                       class="input-group-text bg-transparent"><i
@@ -68,7 +68,7 @@
                                                        <div class="col-md-6">
                                                             <div class="form-check form-switch">
                                                                  <input class="form-check-input" type="checkbox"
-                                                                      id="flexSwitchCheckChecked" checked>
+                                                                      id="flexSwitchCheckChecked">
                                                                  <label class="form-check-label"
                                                                       for="flexSwitchCheckChecked">Remember Me</label>
                                                             </div>

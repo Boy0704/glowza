@@ -61,6 +61,37 @@
                     <div class="menu-title">Statistik Pengunjung</div>
                </a>
           </li>
+          <li>
+               <a href="point_bonus">
+                    <div class="parent-icon"><i class='bx bx-wrench'></i>
+                    </div>
+                    <div class="menu-title">Setting Bonus Point</div>
+               </a>
+          </li>
+          <li>
+               <a href="kas_keluar">
+                    <div class="parent-icon"><i class='bx bx-upvote'></i>
+                    </div>
+                    <div class="menu-title">Kas Keluar</div>
+               </a>
+          </li>
+
+          <li>
+               <a class="has-arrow" href="javascript:;">
+                    <div class="parent-icon"> <i class="bx bx-printer"></i>
+                    </div>
+                    <div class="menu-title">Laporan</div>
+               </a>
+               <ul>
+                    <li> <a href="cetak/jenis/stok"><i class="bx bx-right-arrow-alt"></i>Laporan Stok</a>
+                    <li> <a href="cetak/jenis/penjualan"><i class="bx bx-right-arrow-alt"></i>Laporan Penjualan</a>
+                    <li> <a href="cetak/jenis/pendapatan"><i class="bx bx-right-arrow-alt"></i>Laporan Pendapatan</a>
+                    <li> <a href="cetak/jenis/pengeluaran"><i class="bx bx-right-arrow-alt"></i>Laporan Kas Keluar</a>
+                    </li>
+                   
+               </ul>
+          </li>
+
 		<li>
                <a href="app_user">
                     <div class="parent-icon"><i class='bx bx-user-circle'></i>

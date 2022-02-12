@@ -23,6 +23,7 @@ $string = "
                 }
                 $string .= "\n\t\t<th>Action</th>
                             </tr>
+                            </thead>
                         <tbody>";
             $string .= "<?php
                         \$no = 1;

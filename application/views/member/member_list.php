@@ -40,6 +40,7 @@
                               <th>Akses Terakhir</th>
                               <th>Action</th>
                          </tr>
+                         </thead>
                     <tbody><?php
                         $no = 1;
                         foreach ($member_data as $member)

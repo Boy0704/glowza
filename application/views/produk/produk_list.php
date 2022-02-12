@@ -22,6 +22,7 @@
                               <th>Qty</th>
                               <th>Action</th>
                          </tr>
+                         </thead>
                     <tbody><?php
                         $no = 1;
                         foreach ($produk_data as $produk)

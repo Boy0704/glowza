@@ -33,7 +33,12 @@
                               <?php echo form_error('password') ?></label>
                          <div class="col-sm-9">
                               <input type="text" class="form-control" name="password" id="password"
-                                   placeholder="Password" value="<?php echo $password; ?>" />
+                                   placeholder="Password" />
+                              <?php if(!empty($password)): ?>
+                                   <p>*) Kosongkan password jika tidak diisi.</p>
+                                   <input type="hidden" name="password_old" value="<?php echo $password ?>">
+                              <?php endif ?>
+                              
                          </div>
                     </div>
                     <div class="row mb-3">

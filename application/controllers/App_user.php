@@ -104,7 +104,7 @@ class App_user extends CI_Controller
             $data = array(
 		'nama_lengkap' => $this->input->post('nama_lengkap',TRUE),
 		'username' => $this->input->post('username',TRUE),
-		'password' => $this->input->post('password',TRUE),
+		'password' => $retVal = ($this->input->post('password') == '') ? $_POST['password_old'] : md5($this->input->post('password',TRUE)),
 		'level' => $this->input->post('level',TRUE),
 		'foto' => $retVal = ($_FILES['foto']['name'] == '') ? $_POST['foto_old'] : upload_gambar_biasa('user', 'image/user/', 'jpeg|png|jpg|gif', 10000, 'foto'),
 	    );
@@ -133,7 +133,6 @@ class App_user extends CI_Controller
     {
 	$this->form_validation->set_rules('nama_lengkap', 'nama lengkap', 'trim|required');
 	$this->form_validation->set_rules('username', 'username', 'trim|required');
-	$this->form_validation->set_rules('password', 'password', 'trim|required');
 	$this->form_validation->set_rules('level', 'level', 'trim|required');
 
 	$this->form_validation->set_rules('id_user', 'id_user', 'trim');

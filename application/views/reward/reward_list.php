@@ -20,6 +20,7 @@
                               <th>Poin Target</th>
                               <th>Action</th>
                          </tr>
+                         </thead>
                     <tbody><?php
                         $no = 1;
                         foreach ($reward_data as $reward)
