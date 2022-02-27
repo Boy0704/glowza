@@ -2,7 +2,9 @@
      <div class="card-body">
           <div class="row mb-4">
                <div class="col">
-                    <a href="produk/create" class="btn btn-primary"><i class="bx bx-plus mr-1"></i>Tambah</a>
+                    <?php if ($this->session->userdata('level') == 'superadmin'): ?>
+                         <a href="produk/create" class="btn btn-primary"><i class="bx bx-plus mr-1"></i>Tambah</a>
+                    <?php endif ?>
                </div>
           </div>
           <div class="row mb-3">
