@@ -112,10 +112,24 @@ class Member extends CI_Controller
 	    );
 
             $this->Member_model->insert($data);
+            $this->qrcode($this->input->post('kode_member'));
             $this->session->set_flashdata('message', message('success','Data berhasil disimpan'));
             redirect(site_url('member'));
         }
     }
+
+    public function qrcode($kode_member=null)
+     {
+          if ($kode_member == null) {
+               log_r("ada kesalahan !");
+          }
+          $this->load->library('ciqrcode');
+          $params['data'] = base_url().'app/verifikasi/'.$kode_member;
+          $params['level'] = 'H';
+          $params['size'] = 10;
+          $params['savename'] = FCPATH.'image/qrcode/'.$kode_member.'.png';
+          $this->ciqrcode->generate($params);
+     }
     
     public function update($id) 
     {

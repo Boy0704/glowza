@@ -145,13 +145,14 @@ class App extends CI_Controller {
     
     public function simpan_pendaftaran() 
     {
+          $kode_member = kode_member();
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
             $data = array(
-          'kode_member' => kode_member(),
+          'kode_member' => $kode_member,
           'nama_lengkap' => $this->input->post('nama_lengkap',TRUE),
           'email' => $this->input->post('email',TRUE),
           'no_telp' => $this->input->post('no_telp',TRUE),
@@ -175,6 +176,7 @@ class App extends CI_Controller {
          );
             $this->load->model('Member_model');
             $this->Member_model->insert($data);
+            $this->qrcode($kode_member);
             $this->session->set_flashdata('pesan', alert_biasa('Pendaftaran Berhasil','success'));
                redirect("app/pendaftaran");
         }
