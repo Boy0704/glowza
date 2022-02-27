@@ -198,12 +198,12 @@ class App extends CI_Controller {
      public function update_foto($id_member)
      {
           $foto = upload_gambar_biasa('user', 'image/user/', 'jpg|png|jpeg', 10000, 'foto');
-          $foto_indentitas = upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_indentitas');
+          $foto_identitas = upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_indentitas');
 
           $this->db->where('id_member', $id_member);
           $this->db->update('member', array(
                'foto' => $foto,
-               'foto_indentitas' => $foto_indentitas
+               'foto_identitas' => $foto_identitas
           ));
           $this->session->set_flashdata('pesan', alert_biasa('Foto berhasil diupdate','success'));
           redirect("app/profil");
