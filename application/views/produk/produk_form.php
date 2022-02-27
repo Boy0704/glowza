@@ -10,6 +10,16 @@
                     <hr />
 
                     <div class="row mb-3">
+                         <label for="kode_produk" class="col-sm-3
+                         col-form-label">Kode Produk
+                              <?php echo form_error('kode_produk') ?></label>
+                         <div class="col-sm-9">
+                              <input type="text" class="form-control" name="kode_produk" id="kode_produk"
+                                   placeholder="Kode Produk" value="<?php echo $kode_produk; ?>" />
+                         </div>
+                    </div>
+
+                    <div class="row mb-3">
                          <label for="nama_produk" class="col-sm-3
                          col-form-label">Nama Produk
                               <?php echo form_error('nama_produk') ?></label>

@@ -35,7 +35,8 @@ class Produk extends CI_Controller
             'judul_form' => 'Tambah '.$this->judul_page,
             'button' => 'Simpan',
             'action' => site_url('produk/create_action'),
-	    'id_produk' => set_value('id_produk'),
+        'id_produk' => set_value('id_produk'),
+	    'kode_produk' => set_value('kode_produk'),
 	    'nama_produk' => set_value('nama_produk'),
 	    'deskripsi' => set_value('deskripsi'),
 	    'harga_beli' => set_value('harga_beli'),
@@ -53,6 +54,7 @@ class Produk extends CI_Controller
             $this->create();
         } else {
             $data = array(
+        'kode_produk' => $this->input->post('kode_produk',TRUE),
 		'nama_produk' => $this->input->post('nama_produk',TRUE),
 		'deskripsi' => $this->input->post('deskripsi',TRUE),
 		'harga_beli' => $this->input->post('harga_beli',TRUE),
@@ -77,7 +79,8 @@ class Produk extends CI_Controller
                 'judul_form' => 'Ubah '.$this->judul_page,
                 'button' => 'Update',
                 'action' => site_url('produk/update_action'),
-		'id_produk' => set_value('id_produk', $row->id_produk),
+        'id_produk' => set_value('id_produk', $row->id_produk),
+		'kode_produk' => set_value('kode_produk', $row->kode_produk),
 		'nama_produk' => set_value('nama_produk', $row->nama_produk),
 		'deskripsi' => set_value('deskripsi', $row->deskripsi),
 		'harga_beli' => set_value('harga_beli', $row->harga_beli),
@@ -99,6 +102,7 @@ class Produk extends CI_Controller
             $this->update($this->input->post('id_produk', TRUE));
         } else {
             $data = array(
+        'kode_produk' => $this->input->post('kode_produk',TRUE),
 		'nama_produk' => $this->input->post('nama_produk',TRUE),
 		'deskripsi' => $this->input->post('deskripsi',TRUE),
 		'harga_beli' => $this->input->post('harga_beli',TRUE),
@@ -128,6 +132,7 @@ class Produk extends CI_Controller
 
     public function _rules() 
     {
+    $this->form_validation->set_rules('kode_produk', 'kode produk', 'trim|required');
 	$this->form_validation->set_rules('nama_produk', 'nama produk', 'trim|required');
 	$this->form_validation->set_rules('deskripsi', 'deskripsi', 'trim|required');
 	$this->form_validation->set_rules('harga_beli', 'harga beli', 'trim|required');

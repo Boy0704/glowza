@@ -15,6 +15,7 @@
                     <thead>
                          <tr>
                               <th>No</th>
+                              <th>Kode Produk</th>
                               <th>Nama Produk</th>
                               <th>Deskripsi</th>
                               <th>Harga Beli</th>
@@ -30,6 +31,7 @@
                             ?>
                          <tr>
                               <td width="80px"><?php echo $no ?></td>
+                              <td><?php echo $produk->kode_produk ?></td>
                               <td><?php echo $produk->nama_produk ?></td>
                               <td><?php echo $produk->deskripsi ?></td>
                               <td><?php echo $produk->harga_beli ?></td>
