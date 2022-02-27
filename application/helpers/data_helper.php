@@ -1,5 +1,12 @@
 <?php 
 
+function point_saya($id_member)
+{
+	$CI =& get_instance();
+	$sql = $CI->db->query("SELECT ( sum(point_in) - sum(point_out) ) as total FROM log_point WHERE id_member='$id_member' ");
+	return $sql->row()->total;
+}
+
 function upload_gambar_biasa($nama_gambar, $lokasi_gambar, $tipe_gambar, $ukuran_gambar, $name_file_form)
 {
     $CI =& get_instance();

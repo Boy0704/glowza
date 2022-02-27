@@ -238,8 +238,14 @@
                          </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                         <li><a class="dropdown-item" href="javascript:;"><i
+                         <?php if ( $this->session->userdata('level') == 'superadmin' or $this->session->userdata('level') == 'admin'): ?>
+                              <li><a class="dropdown-item" href="javascript:;"><i
                                         class="bx bx-user"></i><span>Profile</span></a>
+                         <?php else: ?>
+                              <li><a class="dropdown-item" href="app/profil"><i
+                                        class="bx bx-user"></i><span>Profile</span></a>
+                         <?php endif ?>
+                         
                          </li>
                          
                          <li>
