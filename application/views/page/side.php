@@ -166,22 +166,6 @@
                          <div class="menu-title">Kas Keluar</div>
                     </a>
                </li>
-
-               <li>
-                    <a class="has-arrow" href="javascript:;">
-                         <div class="parent-icon"> <i class="bx bx-printer"></i>
-                         </div>
-                         <div class="menu-title">Laporan</div>
-                    </a>
-                    <ul>
-                         <li> <a href="cetak/jenis/stok"><i class="bx bx-right-arrow-alt"></i>Laporan Stok</a>
-                         <li> <a href="cetak/jenis/penjualan"><i class="bx bx-right-arrow-alt"></i>Laporan Penjualan</a>
-                         <li> <a href="cetak/jenis/pendapatan"><i class="bx bx-right-arrow-alt"></i>Laporan Pendapatan</a>
-                         <li> <a href="cetak/jenis/pengeluaran"><i class="bx bx-right-arrow-alt"></i>Laporan Kas Keluar</a>
-                         </li>
-                        
-                    </ul>
-               </li>
           <?php endif ?>
 
           <?php if ($this->session->userdata('level') != 'admin' and $this->session->userdata('level') != 'superadmin' ): ?>
