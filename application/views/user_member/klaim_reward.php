@@ -82,7 +82,7 @@ $point_saya = point_saya($id_member);
                                    $this->db->where('id_member', $id_member);
                                    $this->db->where('id_reward', $row->id_reward);
                                    $cek = $this->db->get('klaim_reward');
-                                   if ($cek->num_rows() > 0) {
+                                   if ($cek->num_rows() == 0) {
                                         if ($point_saya >= $row->poin_target){ ?>
                                              <a href="app/ajukan_klaim/<?php echo $id_member ?>/<?php echo $row->id_reward ?>" class="btn btn-outline-info px-1">Pilih</a>
 
