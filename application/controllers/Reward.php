@@ -27,6 +27,15 @@ class Reward extends CI_Controller
         if ($n == 'y') {
             $this->db->where('id_klaim', $id_klaim);
             $this->db->update('klaim_reward', ['status'=>'approved', 'updated_at'=>get_waktu(), 'user_by'=>$this->session->userdata('id_user')]);
+
+            $klaim = $this->db->get_where('klaim_reward', ['id_klaim'=>$id_klaim])->row();
+            $reward = $this->db->get_where('reward', ['id_reward'=>$klaim->id_reward])->row();
+            $this->db->insert('log_point', array(
+                'id_member' => $klaim->id_member
+                'point_out' => $reward->poin_target,
+                'ket' => 'Klaim '.$reward->judul,
+                'created_at' => get_waktu()
+            ));
             
             $this->session->set_flashdata('message', message('success','Klaim Reward berhasil diapproved'));
             redirect(site_url('reward/klaim_reward'));
