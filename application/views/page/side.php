@@ -106,7 +106,7 @@
                
           <?php endif ?>
 
-          <?php if ($this->session->userdata('level') == 'Member'): ?>
+          <?php if ($this->session->userdata('level') != 'admin' || $this->session->userdata('level') != 'superadmin' ): ?>
                <li>
                     <a href="app">
                          <div class="parent-icon"><i class='bx bx-home-circle'></i>
