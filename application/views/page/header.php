@@ -233,7 +233,7 @@
                          role="button" data-bs-toggle="dropdown" aria-expanded="false">
                          <?php 
                          $img = $this->session->userdata('foto');
-                         if ($img == '') {
+                         if ($img == '' or $img == '<p>You did not select a file to upload.</p>') {
                               $img = 'default.png';
                          }
                           ?>
