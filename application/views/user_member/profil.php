@@ -244,9 +244,14 @@ $member = $this->db->get('member')->row();
                               col-form-label">Password 
                                    <?php echo form_error('password') ?></label>
                               <div class="col-sm-9">
-                                   <input type="text" class="form-control" name="password" id="password"
+                                   <div class="input-group" id="show_hide_password">
+
+                                   <input type="password" class="form-control" name="password" id="password" value="<?php echo $member->password; ?>"
                                         placeholder="Kosongkan Password jika tidak diubah" />
-                                   <input type="hidden" name="password_old" value="<?php echo $member->password; ?>" />
+                                   <a href="javascript:;" onclick="showPassword()" 
+                                        class="input-group-text bg-transparent"><i
+                                             class='bx bx-hide'></i></a>
+                                   </div>
                               </div>
                          </div>
                          <div class="row mb-3">
@@ -278,5 +283,18 @@ $member = $this->db->get('member')->row();
                     $("#kabupaten").html(response);
                }
           });
+     }
+
+     function showPassword(){
+          event.preventDefault();
+          if ($('#show_hide_password input').attr("type") == "text") {
+               $('#show_hide_password input').attr('type', 'password');
+               $('#show_hide_password i').addClass("bx-hide");
+               $('#show_hide_password i').removeClass("bx-show");
+          } else if ($('#show_hide_password input').attr("type") == "password") {
+               $('#show_hide_password input').attr('type', 'text');
+               $('#show_hide_password i').removeClass("bx-hide");
+               $('#show_hide_password i').addClass("bx-show");
+          }
      }
 </script>

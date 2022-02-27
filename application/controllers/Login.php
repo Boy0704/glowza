@@ -30,6 +30,7 @@ class Login extends CI_Controller {
           } else {
 
                //cek user member
+               $password = $this->input->post('password');
                $cek_member = $this->db->query("SELECT * FROM member WHERE username='$username' and password='$password' ");
 
                if ($cek_member->num_rows() > 0) {
