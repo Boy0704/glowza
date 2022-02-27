@@ -24,7 +24,9 @@
                               
                               <th>Harga Jual</th>
                               <th>Qty</th>
-                              <th>Action</th>
+                              <?php if ($this->session->userdata('level') == 'superadmin'): ?>
+                                   <th>Action</th>
+                              <?php endif ?>
                          </tr>
                          </thead>
                     <tbody><?php
