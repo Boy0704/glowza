@@ -31,7 +31,7 @@ class Reward extends CI_Controller
             $klaim = $this->db->get_where('klaim_reward', ['id_klaim'=>$id_klaim])->row();
             $reward = $this->db->get_where('reward', ['id_reward'=>$klaim->id_reward])->row();
             $this->db->insert('log_point', array(
-                'id_member' => $klaim->id_member
+                'id_member' => $klaim->id_member,
                 'point_out' => $reward->poin_target,
                 'ket' => 'Klaim '.$reward->judul,
                 'created_at' => get_waktu()
