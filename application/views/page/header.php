@@ -245,7 +245,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                          <?php if ( $this->session->userdata('level') == 'superadmin' or $this->session->userdata('level') == 'admin'): ?>
-                              <li><a class="dropdown-item" href="javascript:;"><i
+                              <li><a class="dropdown-item" href="app/profil_admin/<?php echo $this->session->userdata('id_user'); ?>"><i
                                         class="bx bx-user"></i><span>Profile</span></a>
                          <?php else: ?>
                               <li><a class="dropdown-item" href="app/profil"><i

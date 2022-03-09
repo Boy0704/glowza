@@ -36,6 +36,7 @@ class Produk extends CI_Controller
             'button' => 'Simpan',
             'action' => site_url('produk/create_action'),
         'id_produk' => set_value('id_produk'),
+        'foto' => set_value('foto'),
 	    'kode_produk' => set_value('kode_produk'),
 	    'nama_produk' => set_value('nama_produk'),
 	    'deskripsi' => set_value('deskripsi'),
@@ -53,6 +54,9 @@ class Produk extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
+
+            $img = upload_gambar_biasa('produk', 'image/produk/', 'jpg|png|jpeg', 10000, 'foto');
+
             $data = array(
         'kode_produk' => $this->input->post('kode_produk',TRUE),
 		'nama_produk' => $this->input->post('nama_produk',TRUE),
@@ -60,6 +64,7 @@ class Produk extends CI_Controller
 		'harga_beli' => $this->input->post('harga_beli',TRUE),
 		'harga_jual' => $this->input->post('harga_jual',TRUE),
 		'qty' => $this->input->post('qty',TRUE),
+        'foto' => $img
 	    );
 
             $this->Produk_model->insert($data);
@@ -80,6 +85,7 @@ class Produk extends CI_Controller
                 'button' => 'Update',
                 'action' => site_url('produk/update_action'),
         'id_produk' => set_value('id_produk', $row->id_produk),
+        'foto' => set_value('foto', $row->foto),
 		'kode_produk' => set_value('kode_produk', $row->kode_produk),
 		'nama_produk' => set_value('nama_produk', $row->nama_produk),
 		'deskripsi' => set_value('deskripsi', $row->deskripsi),
@@ -108,6 +114,7 @@ class Produk extends CI_Controller
 		'harga_beli' => $this->input->post('harga_beli',TRUE),
 		'harga_jual' => $this->input->post('harga_jual',TRUE),
 		'qty' => $this->input->post('qty',TRUE),
+        'foto' => $retVal = ($_FILES['foto']['name'] == '') ? $_POST['foto_old'] : upload_gambar_biasa('produk', 'image/produk/', 'jpeg|png|jpg|gif', 10000, 'foto'),
 	    );
 
             $this->Produk_model->update($this->input->post('id_produk', TRUE), $data);

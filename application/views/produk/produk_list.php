@@ -17,6 +17,7 @@
                     <thead>
                          <tr>
                               <th>No</th>
+                              <th>Foto</th>
                               <th>Kode Produk</th>
                               <th>Nama Produk</th>
                               <th>Deskripsi</th>
@@ -38,6 +39,10 @@
                             ?>
                          <tr>
                               <td width="80px"><?php echo $no ?></td>
+                              <td>
+                                   <img src="image/produk/<?php echo $produk->foto ?>"
+                                        alt="<?php echo $produk->foto ?>" style="width:100px">
+                              </td>
                               <td><?php echo $produk->kode_produk ?></td>
                               <td><?php echo $produk->nama_produk ?></td>
                               <td><?php echo $produk->deskripsi ?></td>

@@ -11,6 +11,21 @@
 
                     <div class="row mb-3">
                          <label for="kode_produk" class="col-sm-3
+                         col-form-label">Foto Produk</label>
+                         <div class="col-sm-9">
+                              <input type="file" class="form-control" name="foto" required />
+                              <input type="hidden" name="foto_old" value="<?php echo $foto ?>">
+                              <div>
+                                   <?php if ($foto != ''): ?>
+                                        <b>*) Foto Sebelumnya : </b><br>
+                                        <img src="image/produk/<?php echo $foto ?>" style="width: 100px;">
+                                   <?php endif ?>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="row mb-3">
+                         <label for="kode_produk" class="col-sm-3
                          col-form-label">Kode Produk
                               <?php echo form_error('kode_produk') ?></label>
                          <div class="col-sm-9">

@@ -209,6 +209,28 @@ class App extends CI_Controller {
           redirect("app/profil");
      }
 
+     public function profil_admin($id_user)
+     {
+          if ($this->session->userdata('level') == '') {
+               redirect('login');
+          }
+          if ($_POST) {
+               $this->db->where('id_user', $id_user);
+               $this->db->update('app_user', array(
+                    'password' => $retVal = ($this->input->post('password') == '') ? $_POST['password_old'] : md5($this->input->post('password',TRUE)),
+                    'foto' => $retVal = ($_FILES['foto']['name'] == '') ? $_POST['foto_old'] : upload_gambar_biasa('user', 'image/user/', 'jpeg|png|jpg|gif', 10000, 'foto')
+               ));
+               $this->session->set_flashdata('pesan', alert_biasa('Profil Berhasil diubah','success'));
+               redirect("app/profil_admin");
+          } else {
+               $data = array(
+                    'judul_page' => "Update Profil",
+                    'konten' => 'profil',
+               );
+               $this->load->view('v_index', $data);
+          }
+     }
+
      public function update_profil($id_member) 
      {
         $this->_rules();
