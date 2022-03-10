@@ -68,9 +68,9 @@ class App extends CI_Controller {
                'judul' => 'Klaim Reward',
                'keterangan' => 'Pengajuan klaim reward oleh ('.get_data('member','id_member',$id_member,'nama_lengkap').')',
                'level_from' => 'user',
-               'from' => $id_member,
+               'user_from' => $id_member,
                'level_to' => 'admin',
-               'to' => 0,
+               'user_to' => 0,
                'link' => base_url().'reward/klaim_reward',
                'created_at' => get_waktu()
           );

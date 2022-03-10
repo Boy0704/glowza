@@ -42,9 +42,9 @@ class Reward extends CI_Controller
                    'judul' => 'Klaim Reward disetujui',
                    'keterangan' => 'Pengajuan klaim reward di setujui admin',
                    'level_from' => 'admin',
-                   'from' => $this->session->userdata('id_user'),
+                   'user_from' => $this->session->userdata('id_user'),
                    'level_to' => 'user',
-                   'to' => $klaim->id_member,
+                   'user_to' => $klaim->id_member,
                    'link' => base_url().'app/klaim_reward',
                    'created_at' => get_waktu()
               );

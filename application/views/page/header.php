@@ -11,7 +11,7 @@
                          if ($level == 'admin' OR $level == 'superadmin' ) {
                               $sql = "SELECT * FROM notifikasi WHERE level_to='admin' and dibaca='t'";
                          } else {
-                              $sql = "SELECT * FROM notifikasi WHERE level_to='user' and to='$id_user' and dibaca='t' ";
+                              $sql = "SELECT * FROM notifikasi WHERE level_to='user' and user_to='$id_user' and dibaca='t' ";
                          }
                          $total_notifikasi = $this->db->query($sql)->num_rows();
 
