@@ -315,6 +315,26 @@ class App extends CI_Controller {
           $this->load->view('card',$data);
      }
 
+     public function card_pdf()
+     {
+          
+          ob_start();
+
+          $data['download'] = null;
+          $this->load->view('card',$data);
+          $html = ob_get_contents();
+          ob_end_clean();
+          include APPPATH . 'third_party/html2_pdf_lib/html2pdf.class.php';
+
+          $html2pdf = new HTML2PDF('P', 'A4', 'en');
+          //$html2pdf->setModeDebug();
+          $html2pdf->setDefaultFont('courier');
+          $html2pdf->writeHTML($html);
+          $html2pdf->Output('image/card/temp.pdf','F');
+
+          
+     }
+
 }
 
 /* End of file App.php */
