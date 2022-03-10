@@ -4,8 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 	<style type="text/css">
-		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+		body {
+		    font-family: 'Poppins';
+		}
 		.bg {
 			width: 700px;
 		}
