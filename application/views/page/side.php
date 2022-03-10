@@ -84,10 +84,11 @@
                          <div class="menu-title">Laporan</div>
                     </a>
                     <ul>
-                         <li> <a href="cetak/jenis/stok"><i class="bx bx-right-arrow-alt"></i>Laporan Stok</a>
+                         <li> <a href="cetak/stok" target="_blank"><i class="bx bx-right-arrow-alt"></i>Laporan Stok</a>
                          <li> <a href="cetak/jenis/penjualan"><i class="bx bx-right-arrow-alt"></i>Laporan Penjualan</a>
                          <li> <a href="cetak/jenis/pendapatan"><i class="bx bx-right-arrow-alt"></i>Laporan Pendapatan</a>
                          <li> <a href="cetak/jenis/pengeluaran"><i class="bx bx-right-arrow-alt"></i>Laporan Kas Keluar</a>
+                         <li> <a href="cetak/jenis/pendaftaran"><i class="bx bx-right-arrow-alt"></i>Pendaftaran Member</a>
                          </li>
                         
                     </ul>

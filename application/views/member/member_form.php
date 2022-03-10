@@ -10,6 +10,35 @@
                     <hr />
 
                     <div class="row mb-3">
+                         <label class="col-sm-3 col-form-label">Foto Profil *</label>
+                         <div class="col-sm-9">
+                              <div>
+                                   <?php if ($foto != ''): ?>
+                                        <b>*) Foto Sebelumnya : </b><br>
+                                        <img src="image/user/<?php echo $foto ?>" style="width: 100px;">
+                                   <?php endif ?>
+                              </div>
+                              <input type="hidden" name="foto_old" value="<?php echo $foto ?>">
+                              <input type="file" class="form-control" name="foto" required />
+                              <p style="color:red;">*) ukuran foto harus 4x4</p>
+                         </div>
+                    </div>
+
+                    <div class="row mb-3">
+                         <label class="col-sm-3 col-form-label">Foto Identitas *</label>
+                         <div class="col-sm-9">
+                              <div>
+                                   <?php if ($foto_identitas != ''): ?>
+                                        <b>*) Foto Identitas Sebelumnya : </b><br>
+                                        <img src="image/ktp/<?php echo $foto_identitas ?>" style="width: 100px;">
+                                   <?php endif ?>
+                              </div>
+                              <input type="hidden" name="foto_identitas_old" value="<?php echo $foto_identitas ?>">
+                              <input type="file" class="form-control" name="foto_identitas" required />
+                         </div>
+                    </div>
+
+                    <div class="row mb-3">
                          <label for="kode_member" class="col-sm-3
                          col-form-label">Kode Member *
                               <?php echo form_error('kode_member') ?></label>

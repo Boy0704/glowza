@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 		.bg {
 			width: 700px;
 		}

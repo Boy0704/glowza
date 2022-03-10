@@ -57,6 +57,8 @@ class Member extends CI_Controller
             'action' => site_url('member/create_action'),
 	    'id_member' => set_value('id_member'),
 	    'kode_member' => kode_member(),
+	    'foto' => set_value('foto'),
+	    'foto_identitas' => set_value('foto_identitas'),
 	    'nama_lengkap' => set_value('nama_lengkap'),
 	    'email' => set_value('email'),
 	    'no_telp' => set_value('no_telp'),
@@ -87,9 +89,15 @@ class Member extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
+
+        	$foto = upload_gambar_biasa('user', 'image/user/', 'jpg|png|jpeg', 10000, 'foto');
+          $foto_identitas = upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_indentitas');
+
             $data = array(
 		'kode_member' => $this->input->post('kode_member',TRUE),
 		'nama_lengkap' => $this->input->post('nama_lengkap',TRUE),
+		'foto' => $foto,
+		'foto_identitas' => $foto_identitas,
 		'email' => $this->input->post('email',TRUE),
 		'no_telp' => $this->input->post('no_telp',TRUE),
 		'instagram' => $this->input->post('instagram',TRUE),
@@ -145,6 +153,8 @@ class Member extends CI_Controller
 		'id_member' => set_value('id_member', $row->id_member),
 		'kode_member' => set_value('kode_member', $row->kode_member),
 		'nama_lengkap' => set_value('nama_lengkap', $row->nama_lengkap),
+		'foto' => set_value('foto', $row->foto),
+		'foto_identitas' => set_value('foto_identitas', $row->foto_identitas),
 		'email' => set_value('email', $row->email),
 		'no_telp' => set_value('no_telp', $row->no_telp),
 		'instagram' => set_value('instagram', $row->instagram),
@@ -200,6 +210,8 @@ class Member extends CI_Controller
 		'password' => $this->input->post('password',TRUE),
 		'level' => $this->input->post('level',TRUE),
 		'updated_at' => get_waktu(),
+		'foto' => $retVal = ($_FILES['foto']['name'] == '') ? $_POST['foto_old'] : upload_gambar_biasa('user', 'image/user/', 'jpeg|png|jpg|gif', 10000, 'foto'),
+		'foto_identitas' => $retVal = ($_FILES['foto_identitas']['name'] == '') ? $_POST['foto_identitas_old'] : upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_indentitas'),
 	    );
 
             $this->Member_model->update($this->input->post('id_member', TRUE), $data);

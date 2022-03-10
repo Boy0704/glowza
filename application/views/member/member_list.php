@@ -17,6 +17,7 @@
                               <th>No</th>
                               <th>Kode Member</th>
                               <th>Nama Lengkap</th>
+                              <th>KTP</th>
                               <th>Email</th>
                               <th>No Telp</th>
                               <th>Instagram</th>
@@ -54,6 +55,11 @@
 							<?php echo $member->nama_lengkap ?>
 							</a>
 						</td>
+                              <td>
+                                   <a href="image/ktp/<?php echo $member->foto_identitas ?>" target="_blank">
+                                        Download
+                                   </a>
+                              </td>
                               <td><?php echo $member->email ?></td>
                               <td><?php echo $member->no_telp ?></td>
                               <td><?php echo $member->instagram ?></td>

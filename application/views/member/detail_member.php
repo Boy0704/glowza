@@ -1,21 +1,27 @@
+
+<?php 
+$id_member = $this->uri->segment(3);
+$point_saya = point_saya($id_member);
+ ?>
+
 <div class="card">
      <div class="card-body">
           <ul class="nav nav-tabs nav-success" role="tablist">
                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" data-bs-toggle="tab" href="#successhome" role="tab" aria-selected="true">
-                         <div class="d-flex align-items-center">
-                              <div class="tab-icon"><i class="bx bx-cart-alt font-18 me-1"></i>
-                              </div>
-                              <div class="tab-title">History Pembelian</div>
-                         </div>
-                    </a>
-               </li>
-               <li class="nav-item" role="presentation">
-                    <a class="nav-link" data-bs-toggle="tab" href="#successprofile" role="tab" aria-selected="false">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#successprofile" role="tab" aria-selected="false">
                          <div class="d-flex align-items-center">
                               <div class="tab-icon"><i class="bx bx-import font-18 me-1"></i>
                               </div>
                               <div class="tab-title">History Poin IN/OUT</div>
+                         </div>
+                    </a>
+               </li>
+               <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#successhome" role="tab" aria-selected="true">
+                         <div class="d-flex align-items-center">
+                              <div class="tab-icon"><i class="bx bx-cart-alt font-18 me-1"></i>
+                              </div>
+                              <div class="tab-title">History Pembelian</div>
                          </div>
                     </a>
                </li>
@@ -30,31 +36,164 @@
                </li>
           </ul>
           <div class="tab-content py-3">
-               <div class="tab-pane fade active show" id="successhome" role="tabpanel">
-                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
-                         retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
-                         Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure
-                         terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan
-                         american apparel, butcher voluptate nisi.</p>
+               
+               <div class="tab-pane fade active show" id="successprofile" role="tabpanel">
+                    
+
+                    <div class="card">
+                         <div class="card-body">
+                              <div class="row mb-4">
+                                   <div class="col">
+                                        
+                                   </div>
+                              </div>
+                              <div class="row mb-3">
+                                   <div class="col">
+                                        <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
+                                        
+                                   </div>
+                              </div>
+                              <div class="table-responsive">
+                                   <table id="exampleDataTable" class="table table-striped table-bordered" style="width:100%">
+                                        <thead>
+                                             <tr>
+                                                  <th>No</th>
+                                                  <th>Point IN</th>
+                                                  <th>Point OUT</th>
+                                                  <th>Created at</th>
+                                                  <th>Ket</th>
+                                             </tr>
+                                        <tbody><?php
+                                            $no = 1;
+                                            $this->db->order_by('id_log_point', 'desc');
+                                            $this->db->where('id_member', $id_member);
+                                            $data = $this->db->get('log_point')->result();
+                                            foreach ($data as $row)
+                                            {
+                                                ?>
+                                             <tr>
+                                                  <td width="80px"><?php echo $no ?></td>
+                                                  <td><?php echo $row->point_in ?> Point</td>
+                                                  <td><?php echo $row->point_out ?> Point</td>
+                                                  <td><?php echo $row->created_at ?></td>
+                                                  <td><?php echo $row->ket ?></td>
+                                                  
+                                             </tr>
+                                             <?php
+                                                $no++;
+                                            }
+                                            ?>
+                                        </tbody>
+                                   </table>
+                              </div>
+                         </div>
+                    </div>
                </div>
-               <div class="tab-pane fade" id="successprofile" role="tabpanel">
-                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
-                         Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four
-                         loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk
-                         aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore
-                         aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente
-                         labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts
-                         beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr
-                         butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+               <div class="tab-pane fade" id="successhome" role="tabpanel">
+                    <p>Tahap pengembangan.</p>
                </div>
                <div class="tab-pane fade" id="successcontact" role="tabpanel">
-                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo
-                         retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft
-                         beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR
-                         banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever
-                         gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you
-                         probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu
-                         synth chambray yr.</p>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+     <div class="col">
+          <div class="card radius-10 border-start border-0 border-3 border-danger">
+               <div class="card-body">
+                    <div class="d-flex align-items-center">
+                         <div>
+                              <p class="mb-0 text-secondary">Point saat ini</p>
+                              <h4 class="my-1 text-danger"><?php echo $point_saya ?></h4>
+                              <p class="mb-0 font-13"></p>
+                         </div>
+                         <div class="widgets-icons-2 rounded-circle bg-gradient-bloody text-white ms-auto">
+                              <i class="bx bxs-wallet"></i>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+<div class="card">
+     <div class="card-body">
+          <div class="row mb-4">
+               <div class="col">
+                    
+               </div>
+          </div>
+          <div class="row mb-3">
+               <div class="col">
+                    <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
+                    
+               </div>
+          </div>
+          <div class="table-responsive">
+               <table id="exampleDataTable" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                         <tr>
+                              <th>No</th>
+                              <th>Reward</th>
+                              <th>Syarat Point</th>
+                              <th>Status</th>
+                              <th>Option</th>
+                         </tr>
+                    <tbody><?php
+                        $no = 1;
+                        $this->db->order_by('id_reward', 'desc');
+                        $data = $this->db->get('reward')->result();
+                        foreach ($data as $row)
+                        {
+                            ?>
+                         <tr>
+                              <td width="80px"><?php echo $no ?></td>
+                              <td>
+                                   <b><?php echo $row->judul ?></b><br>
+                                   <hr>
+                                   <?php echo $row->deskripsi ?>
+
+                              </td>
+                              <td><?php echo $row->poin_target ?> Point</td>
+                              <td>
+                                   <?php 
+                                   if ($point_saya < $row->poin_target) {
+                                        echo '<span class="badge bg-danger">Point belum cukup</span>';
+                                   } else {
+                                        $this->db->where('id_member', $id_member);
+                                        $this->db->where('id_reward', $row->id_reward);
+                                        $cek = $this->db->get('klaim_reward');
+                                        if ($cek->num_rows() > 0) {
+                                             $klaim = $cek->row();
+                                             echo '<span class="badge bg-info">'.$klaim->status.'</span>'; 
+                                        } else {
+                                             echo '<span class="badge bg-info">Point Cukup, silahkan ambil</span>';
+                                        }
+                                   }
+
+                                    ?>
+                              </td>
+                              <td>
+                                   <?php
+                                   $this->db->where('id_member', $id_member);
+                                   $this->db->where('id_reward', $row->id_reward);
+                                   $cek = $this->db->get('klaim_reward');
+                                   if ($cek->num_rows() == 0) {
+                                        if ($point_saya >= $row->poin_target){ ?>
+                                             <a href="app/ajukan_klaim/<?php echo $id_member ?>/<?php echo $row->id_reward ?>" class="btn btn-outline-info px-1">Pilih</a>
+
+
+                                   <?php 
+                              } 
+
+                              } ?>
+                              </td>
+                              
+                         </tr>
+                         <?php
+                            $no++;
+                        }
+                        ?>
+                    </tbody>
+               </table>
+          </div>
+     </div>
+</div>
                </div>
           </div>
      </div>

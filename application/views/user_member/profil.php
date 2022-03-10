@@ -40,6 +40,7 @@ $member = $this->db->get('member')->row();
                                         <?php endif ?>
                                    </div>
                                    <input type="file" class="form-control" name="foto" required />
+                                   <p style="color:red;">*) ukuran foto harus 4x4</p>
                               </div>
                          </div>
 
