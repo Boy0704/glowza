@@ -143,6 +143,8 @@ class App extends CI_Controller {
          'id_member' => set_value('id_member'),
          'kode_member' => kode_member(),
          'nama_lengkap' => set_value('nama_lengkap'),
+         'foto' => set_value('foto'),
+         'foto_identitas' => set_value('foto_identitas'),
          'email' => set_value('email'),
          'no_telp' => set_value('no_telp'),
          'instagram' => set_value('instagram'),
@@ -173,9 +175,15 @@ class App extends CI_Controller {
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
+
+               $foto = upload_gambar_biasa('user', 'image/user/', 'jpg|png|jpeg', 10000, 'foto');
+          $foto_identitas = upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_indentitas');
+
             $data = array(
           'kode_member' => $kode_member,
           'nama_lengkap' => $this->input->post('nama_lengkap',TRUE),
+          'foto' => $foto,
+          'foto_identitas' => $foto_identitas,
           'email' => $this->input->post('email',TRUE),
           'no_telp' => $this->input->post('no_telp',TRUE),
           'instagram' => $this->input->post('instagram',TRUE),
