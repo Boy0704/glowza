@@ -23,6 +23,15 @@ class App extends CI_Controller {
           $this->load->view('v_index', $data);
      }
 
+
+     public function baca_notifikasi($id_notifikasi)
+     {
+          $link = $this->input->get('link');
+          $this->db->where('id_notifikasi', $id_notifikasi);
+          $this->db->update('notifikasi', ['dibaca'=>'y', 'user_by'=>$this->session->userdata('id_user'), 'updated_at' => get_waktu() ]);
+          redirect($link,'refresh');
+     }
+
      public function statistik_pengunjung()
      {
           if ($this->session->userdata('level') == '') {
@@ -54,6 +63,19 @@ class App extends CI_Controller {
                'id_reward' => $id_reward,
                'created_at' => get_waktu()
           ));
+          //kirim notifikasi
+          $notif = array(
+               'judul' => 'Klaim Reward',
+               'keterangan' => 'Pengajuan klaim reward oleh ('.get_data('member','id_member',$id_member,'nama_lengkap').')',
+               'level_from' => 'user',
+               'from' => $id_member,
+               'level_to' => 'admin',
+               'to' => 0,
+               'link' => base_url().'reward/klaim_reward',
+               'created_at' => get_waktu()
+          );
+          $this->db->insert('notifikasi', $notif);
+
           $this->session->set_flashdata('pesan', alert_biasa('Berhasil di ajukan','success'));
           redirect("app");
      }

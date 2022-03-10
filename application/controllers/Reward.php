@@ -36,6 +36,19 @@ class Reward extends CI_Controller
                 'ket' => 'Klaim '.$reward->judul,
                 'created_at' => get_waktu()
             ));
+
+            //kirim notifikasi
+              $notif = array(
+                   'judul' => 'Klaim Reward disetujui',
+                   'keterangan' => 'Pengajuan klaim reward di setujui admin',
+                   'level_from' => 'admin',
+                   'from' => $this->session->userdata('id_user'),
+                   'level_to' => 'user',
+                   'to' => $klaim->id_member,
+                   'link' => base_url().'app/klaim_reward',
+                   'created_at' => get_waktu()
+              );
+              $this->db->insert('notifikasi', $notif);
             
             $this->session->set_flashdata('message', message('success','Klaim Reward berhasil diapproved'));
             redirect(site_url('reward/klaim_reward'));

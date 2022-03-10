@@ -5,46 +5,50 @@
                </div>
                <div class="top-menu ms-auto">
                     <ul class="navbar-nav align-items-center">
+                         <?php 
+                         $level = $this->session->userdata('level');
+                         $id_user = $this->session->userdata('id_user');
+                         if ($level == 'admin' OR $level == 'superadmin' ) {
+                              $sql = "SELECT * FROM notifikasi WHERE level_to='admin' and dibaca='t'";
+                         } else {
+                              $sql = "SELECT * FROM notifikasi WHERE level_to='user' and to='$id_user' and dibaca='t' ";
+                         }
+                         $total_notifikasi = $this->db->query($sql)->num_rows();
+
+                          ?>
                          <li class="nav-item dropdown dropdown-large">
                               <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
                                    role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
-                                        class="alert-count">0</span>
+                                        class="alert-count"><?php echo $total_notifikasi ?></span>
                                    <i class='bx bx-bell'></i>
                               </a>
                               <div class="dropdown-menu dropdown-menu-end">
                                    <a href="javascript:;">
                                         <div class="msg-header">
                                              <p class="msg-header-title">Notifications</p>
-                                             <p class="msg-header-clear ms-auto">Marks all as read</p>
+                                             <p class="msg-header-clear ms-auto"></p>
                                         </div>
                                    </a>
                                    <div class="header-notifications-list">
-                                        <a class="dropdown-item" href="javascript:;">
+
+                                   <?php 
+                                   foreach ($this->db->query($sql)->result() as $rw): ?>
+                                        
+                                        <a class="dropdown-item" href="app/baca_notifikasi/<?php echo $rw->id_notifikasi ?>?link=<?php echo $rw->link ?>">
                                              <div class="d-flex align-items-center">
                                                   <div class="notify bg-light-primary text-primary">
-                                                       <i class="bx bx-group"></i>
+                                                       <i class="bx bx-message-square-detail"></i>
                                                   </div>
                                                   <div class="flex-grow-1">
-                                                       <h6 class="msg-name">New Customers<span
-                                                                 class="msg-time float-end">14 Sec
-                                                                 ago</span></h6>
-                                                       <p class="msg-info">5 new user registered</p>
+                                                       <h6 class="msg-name"><?php echo $rw->judul ?><span
+                                                                 class="msg-time float-end"><?php echo $rw->created_at ?></span></h6>
+                                                       <p class="msg-info"><?php echo $rw->keterangan ?></p>
                                                   </div>
                                              </div>
                                         </a>
-                                        <a class="dropdown-item" href="javascript:;">
-                                             <div class="d-flex align-items-center">
-                                                  <div class="notify bg-light-danger text-danger"><i
-                                                            class="bx bx-cart-alt"></i>
-                                                  </div>
-                                                  <div class="flex-grow-1">
-                                                       <h6 class="msg-name">New Orders <span
-                                                                 class="msg-time float-end">2 min
-                                                                 ago</span></h6>
-                                                       <p class="msg-info">You have recived new orders</p>
-                                                  </div>
-                                             </div>
-                                        </a>
+
+                                   <?php endforeach ?>
+                                        
                                         
                                    </div>
                                    <a href="javascript:;">
