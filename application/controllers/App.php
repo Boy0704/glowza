@@ -332,16 +332,61 @@ class App extends CI_Controller {
           $this->load->view('card',$data);
           $html = ob_get_contents();
           ob_end_clean();
-          include APPPATH . 'third_party/html2_pdf_lib/html2pdf.class.php';
+          // include APPPATH . 'third_party/html2_pdf_lib/html2pdf.class.php';
 
-          $html2pdf = new HTML2PDF('P', 'A4', 'en');
-          //$html2pdf->setModeDebug();
-          $html2pdf->setDefaultFont('courier');
-          $html2pdf->writeHTML($html);
-          $html2pdf->Output('image/card/temp.pdf','F');
+          // $html2pdf = new HTML2PDF('P', 'A4', 'en');
+          // //$html2pdf->setModeDebug();
+          // $html2pdf->setDefaultFont('courier');
+          // $html2pdf->writeHTML($html);
+          // $html2pdf->Output('image/card/temp.pdf','F');
 
+          // require APPPATH . 'third_party/html2pdf/autoload.php';
+          // $pdf = new Spipu\Html2Pdf\Html2Pdf('P','A4','en');
+          // $pdf->WriteHTML($html);
+          // $pdf->Output('Data Siswa.pdf', 'D');
+
+          //  $this->load->library('mpdf_l');
+          // $mpdf                           = $this->mpdf_l->load();
+          // $mpdf->allow_charset_conversion = true;  // Set by default to TRUE
+          // $mpdf->charset_in               = 'UTF-8';
+          // $mpdf->autoLangToFont           = true;
+          // $mpdf->AddPage('L'); // P - L
+          // // $data['kode_tindakan'] = $kode_tindakan;
+          // // $html = $this->load->view('cetak/tindakan_lap',$data, TRUE);
+          
+
+          // $mpdf->WriteHTML($html);
+
+          // $output = 'coba.pdf';
+          // $mpdf->Output("$output", 'I');
           
      }
+
+     public function card_png()
+     {
+          if ($_POST) {
+               define('UPLOAD_DIR', 'image/card/');  
+               $img = $_POST['imgBase64'];
+               $kode_member = $this->input->post('kodeMember');  
+               $img = str_replace('data:image/png;base64,', '', $img);  
+               $img = str_replace(' ', '+', $img);  
+               $data = base64_decode($img);  
+               $file = UPLOAD_DIR . $kode_member . '.png';  
+               $success = file_put_contents($file, $data);  
+               print $success ? $file : 'Terjadi error, mohon cek kembali';
+          } else {
+               $this->load->view('card_png');
+          }
+          
+     }
+
+     public function download_card_png($kode_member)
+     {
+          $this->load->helper('download');
+          force_download('image/card/'.$kode_member.'.png',NULL);
+     }    
+
+
 
 }
 

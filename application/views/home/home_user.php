@@ -71,7 +71,7 @@ $point_saya = point_saya($id_member);
                                              <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-horizontal-rounded font-22 text-option"></i>
                                              </a>
                                              <ul class="dropdown-menu" style="">
-                                                  <li><a class="dropdown-item" target="_blank" href="app/card/y">Download PDF</a>
+                                                  <li><a class="dropdown-item" target="_blank" href="app/card/y/<?php echo get_data('member','id_member',$id_member,'kode_member') ?>">Download PDF</a>
                                                   </li>
                                                   <li><a class="dropdown-item" target="_blank" href="app/card_png/y">Download PNG</a>
                                                   </li>
