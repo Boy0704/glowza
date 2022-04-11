@@ -386,6 +386,11 @@ class App extends CI_Controller {
           force_download('image/card/'.$kode_member.'.png',NULL);
      }    
 
+     public function _rules() 
+     {
+
+     }
+
 
 
 }
