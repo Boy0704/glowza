@@ -6,7 +6,7 @@ $member = $this->db->get('app_user')->row();
  ?>
 <div class="card">
      <div class="card-body">
-          <form action="" method="POST">
+          <form action="" method="POST" enctype="multipart/form-data">
                <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Foto Profil *</label>
                     <div class="col-sm-9">
