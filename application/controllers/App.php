@@ -250,8 +250,8 @@ class App extends CI_Controller {
                     'password' => $retVal = ($this->input->post('password') == '') ? $_POST['password_old'] : md5($this->input->post('password',TRUE)),
                     'foto' => $retVal = ($_FILES['foto']['name'] == '') ? $_POST['foto_old'] : upload_gambar_biasa('user', 'image/user/', 'jpeg|png|jpg|gif', 10000, 'foto')
                ));
-               $this->session->set_flashdata('pesan', alert_biasa('Profil Berhasil diubah','success'));
-               redirect("app/profil_admin");
+               $this->session->set_flashdata('pesan', alert_biasa('Profil Berhasil diubah, silahkan login kembali','success'));
+               redirect("login");
           } else {
                $data = array(
                     'judul_page' => "Update Profil",
