@@ -39,7 +39,10 @@ class Produk extends CI_Controller
         'foto' => set_value('foto'),
 	    'kode_produk' => set_value('kode_produk'),
 	    'nama_produk' => set_value('nama_produk'),
-	    'deskripsi' => set_value('deskripsi'),
+        'deskripsi' => set_value('deskripsi'),
+        'id_paket' => set_value('id_paket'),
+        'cara_pakai' => set_value('cara_pakai'),
+	    'komposisi' => set_value('komposisi'),
 	    'harga_beli' => set_value('harga_beli'),
 	    'harga_jual' => set_value('harga_jual'),
 	    'qty' => set_value('qty'),
@@ -60,7 +63,10 @@ class Produk extends CI_Controller
             $data = array(
         'kode_produk' => $this->input->post('kode_produk',TRUE),
 		'nama_produk' => $this->input->post('nama_produk',TRUE),
-		'deskripsi' => $this->input->post('deskripsi',TRUE),
+        'deskripsi' => $this->input->post('deskripsi',TRUE),
+        'id_paket' => $this->input->post('id_paket',TRUE),
+        'cara_pakai' => $this->input->post('cara_pakai',TRUE),
+		'komposisi' => $this->input->post('komposisi',TRUE),
 		'harga_beli' => $this->input->post('harga_beli',TRUE),
 		'harga_jual' => $this->input->post('harga_jual',TRUE),
 		'qty' => $this->input->post('qty',TRUE),
@@ -88,7 +94,10 @@ class Produk extends CI_Controller
         'foto' => set_value('foto', $row->foto),
 		'kode_produk' => set_value('kode_produk', $row->kode_produk),
 		'nama_produk' => set_value('nama_produk', $row->nama_produk),
-		'deskripsi' => set_value('deskripsi', $row->deskripsi),
+        'deskripsi' => set_value('deskripsi', $row->deskripsi),
+        'id_paket' => set_value('id_paket', $row->id_paket),
+        'cara_pakai' => set_value('cara_pakai', $row->cara_pakai),
+		'komposisi' => set_value('komposisi', $row->komposisi),
 		'harga_beli' => set_value('harga_beli', $row->harga_beli),
 		'harga_jual' => set_value('harga_jual', $row->harga_jual),
 		'qty' => set_value('qty', $row->qty),
@@ -110,7 +119,10 @@ class Produk extends CI_Controller
             $data = array(
         'kode_produk' => $this->input->post('kode_produk',TRUE),
 		'nama_produk' => $this->input->post('nama_produk',TRUE),
-		'deskripsi' => $this->input->post('deskripsi',TRUE),
+        'deskripsi' => $this->input->post('deskripsi',TRUE),
+		'id_paket' => $this->input->post('id_paket',TRUE),
+        'cara_pakai' => $this->input->post('cara_pakai',TRUE),
+        'komposisi' => $this->input->post('komposisi',TRUE),
 		'harga_beli' => $this->input->post('harga_beli',TRUE),
 		'harga_jual' => $this->input->post('harga_jual',TRUE),
 		'qty' => $this->input->post('qty',TRUE),
@@ -141,7 +153,10 @@ class Produk extends CI_Controller
     {
     $this->form_validation->set_rules('kode_produk', 'kode produk', 'trim|required');
 	$this->form_validation->set_rules('nama_produk', 'nama produk', 'trim|required');
-	$this->form_validation->set_rules('deskripsi', 'deskripsi', 'trim|required');
+    $this->form_validation->set_rules('deskripsi', 'deskripsi', 'trim|required');
+    $this->form_validation->set_rules('id_paket', 'Paket', 'trim|required');
+    $this->form_validation->set_rules('cara_pakai', 'Cara Penggunaan', 'trim|required');
+	$this->form_validation->set_rules('komposisi', 'Kandungan Bahan', 'trim|required');
 	$this->form_validation->set_rules('harga_beli', 'harga beli', 'trim|required');
 	$this->form_validation->set_rules('harga_jual', 'harga jual', 'trim|required');
 	$this->form_validation->set_rules('qty', 'qty', 'trim|required');

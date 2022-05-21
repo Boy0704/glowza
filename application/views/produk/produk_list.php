@@ -20,7 +20,6 @@
                               <th>Foto</th>
                               <th>Kode Produk</th>
                               <th>Nama Produk</th>
-                              <th>Deskripsi</th>
                               <?php if ($this->session->userdata('level') == 'superadmin'): ?>
                                    <th>Harga Beli</th>
                               <?php endif ?>
@@ -45,7 +44,6 @@
                               </td>
                               <td><?php echo $produk->kode_produk ?></td>
                               <td><?php echo $produk->nama_produk ?></td>
-                              <td><?php echo $produk->deskripsi ?></td>
                               <?php if ($this->session->userdata('level') == 'superadmin'): ?>
                                    <td><?php echo $produk->harga_beli ?></td>
                               <?php endif ?>

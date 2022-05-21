@@ -34,8 +34,8 @@
 
                         <a href="paket/update/<?php echo $paket->id_paket ?>" title="Update Data" class="btn btn-sm btn-primary"><i class="bx bx-edit me-0"></i>
                         </a>
-                        <a href="paket/delete/<?php echo $paket->id_paket ?>" title="Hapus Data" onclick="javasciprt: return confirm('Yakin akan hapus data ini ?')" class="btn btn-sm btn-danger"><i class="bx bx-trash-alt me-0"></i>
-                        </a>
+                        <!-- <a href="paket/delete/<?php echo $paket->id_paket ?>" title="Hapus Data" onclick="javasciprt: return confirm('Yakin akan hapus data ini ?')" class="btn btn-sm btn-danger"><i class="bx bx-trash-alt me-0"></i>
+                        </a> -->
             
 			</td>
 		</tr>

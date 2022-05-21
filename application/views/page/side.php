@@ -35,6 +35,21 @@
                     </a>
                </li>
                <li>
+                    <a class="has-arrow" href="javascript:;">
+                         <div class="parent-icon"> <i class="bx bx-chevrons-right"></i>
+                         </div>
+                         <div class="menu-title">Manage Web</div>
+                    </a>
+                    <ul>
+                         <li> <a href="slider"><i class="bx bx-right-arrow-alt"></i>Slide</a>
+                         <li> <a href="testimoni"><i class="bx bx-right-arrow-alt"></i>Testimoni</a>
+                         <li> <a href="subscribe"><i class="bx bx-right-arrow-alt"></i>Subscribe</a>
+                         <li> <a href="setting"><i class="bx bx-right-arrow-alt"></i>Setting Web</a>
+                         </li>
+                        
+                    </ul>
+               </li>
+               <li>
                     <a href="member">
                          <div class="parent-icon"><i class='bx bx-user-check'></i>
                          </div>

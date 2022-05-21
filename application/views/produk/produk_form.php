@@ -13,7 +13,7 @@
                          <label for="kode_produk" class="col-sm-3
                          col-form-label">Foto Produk</label>
                          <div class="col-sm-9">
-                              <input type="file" class="form-control" name="foto" required />
+                              <input type="file" class="form-control" name="foto" <?php echo ($foto == '') ? 'required' : '' ?> />
                               <input type="hidden" name="foto_old" value="<?php echo $foto ?>">
                               <div>
                                    <?php if ($foto != ''): ?>
@@ -35,6 +35,20 @@
                     </div>
 
                     <div class="row mb-3">
+                         <label for="kode_produk" class="col-sm-3
+                         col-form-label">Kategori Paket
+                              <?php echo form_error('paket') ?></label>
+                         <div class="col-sm-9">
+                              <select name="id_paket" id="id_paket" class="single-select">
+                                   <option value="<?php echo $id_paket ?>"><?php echo get_data('paket','id_paket',$id_paket,'nama_paket') ?></option>
+                                   <?php foreach ($this->db->get('paket')->result() as $rw): ?>
+                                   <option value="<?php echo $rw->id_paket ?>"><?php echo $rw->nama_paket ?></option>
+                                   <?php endforeach ?>
+                              </select>
+                         </div>
+                    </div>
+
+                    <div class="row mb-3">
                          <label for="nama_produk" class="col-sm-3
                          col-form-label">Nama Produk
                               <?php echo form_error('nama_produk') ?></label>
@@ -50,6 +64,24 @@
                          <div class="col-sm-9">
                               <textarea class="form-control" rows="3" name="deskripsi" id="deskripsi" rows="3"
                                    placeholder="Deskripsi"><?php echo $deskripsi; ?></textarea>
+                         </div>
+                    </div>
+                    <div class="row mb-3">
+                         <label for="deskripsi" class="col-sm-3
+                         col-form-label">Cara Penggunaan
+                              <?php echo form_error('cara_pakai') ?></label>
+                         <div class="col-sm-9">
+                              <textarea class="form-control" rows="3" name="cara_pakai" id="cara_pakai" rows="3"
+                                   placeholder="Deskripsi"><?php echo $cara_pakai; ?></textarea>
+                         </div>
+                    </div>
+                    <div class="row mb-3">
+                         <label for="deskripsi" class="col-sm-3
+                         col-form-label">Kandungan Bahan
+                              <?php echo form_error('komposisi') ?></label>
+                         <div class="col-sm-9">
+                              <textarea class="form-control" rows="3" name="komposisi" id="komposisi" rows="3"
+                                   placeholder="Deskripsi"><?php echo $komposisi; ?></textarea>
                          </div>
                     </div>
                     <div class="row mb-3">
@@ -89,3 +121,9 @@
           </div>
      </div>
 </form>
+<script src="https://cdn.ckeditor.com/4.19.0/standard-all/ckeditor.js"></script>
+<script>
+     CKEDITOR.replace('deskripsi');    
+     CKEDITOR.replace('cara_pakai');    
+     CKEDITOR.replace('komposisi');   
+</script>
