@@ -265,8 +265,8 @@
                                    <!-- Section Title End -->
                                    <!-- Blog Activation Start -->
                                    <div class="col-sm-12">
-                                        <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                                        <div class="elfsight-app-93c857c9-9669-47f0-9cc4-3012d055a8c0"></div> -->
+                                        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                                        <div class="elfsight-app-93c857c9-9669-47f0-9cc4-3012d055a8c0"></div>
                                    </div>
                                    <!-- Blog Activation End -->
                               </div>
