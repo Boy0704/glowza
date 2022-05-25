@@ -142,6 +142,26 @@
                             <br>
                             <p><?php echo $produk->komposisi ?></p>
                             <br>
+                            <br>
+                            <a href="#" data-toggle="modal" data-target="#pilihan" class="btn btn-outline-dark"><i class="fa fa-shopping-cart"></i> Beli Produk</a>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="pilihan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <a href="" class="btn btn-outline-dark btn-block"><i class="fa fa-shopping-cart"></i> Beli Produk Ke Member Kami</a>
+                                    <a href="" class="btn btn-outline-dark btn-block"><i class="fa fa-comment"></i> Tanya Produk Ke Customer Service</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                             
                         </div>
                     </div>

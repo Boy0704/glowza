@@ -109,33 +109,26 @@
                     <div id="grid-view" class="tab-pane fade show active">
                          <div class="row border-hover-effect ">
 
-                            <?php 
+                              <?php 
                             $this->db->where('id_paket', 1);
                             $skincare = $this->db->get('produk');
                             foreach ($skincare->result() as $skin): ?>
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-6">
                                    <div class="single-makal-product">
                                         <div class="pro-img">
                                              <a href="web/detail_produk/<?php echo $skin->id_produk ?>">
-                                                  <img src="image/produk/<?php echo $skin->foto ?>"
-                                                       alt="product-img">
+                                                  <img src="image/produk/<?php echo $skin->foto ?>" alt="product-img">
                                              </a>
                                              <span class="sticker-new">SKINCARE</span>
 
                                         </div>
                                         <div class="pro-content">
                                              <h4 class="pro-title">
-                                                  <a href="web/detail_produk/<?php echo $skin->id_produk ?>"><?php echo $skin->nama_produk ?></a>
+                                                  <a
+                                                       href="web/detail_produk/<?php echo $skin->id_produk ?>"><?php echo $skin->nama_produk ?></a>
                                              </h4>
-                                             <a href="web/detail_produk/<?php echo $skin->id_produk ?>"><label>Rp.
-                                                       <?php echo number_format($skin->harga_jual) ?></label>
-                                                  <div class="rating">
-                                                       <i class="fa fa-star" aria-hidden="true"></i>
-                                                       <i class="fa fa-star" aria-hidden="true"></i>
-                                                       <i class="fa fa-star" aria-hidden="true"></i>
-                                                       <i class="fa fa-star" aria-hidden="true"></i>
-                                                       <i class="fa fa-star" aria-hidden="true"></i>
-                                                  </div>
+                                             <a href="web/detail_produk/<?php echo $skin->id_produk ?>" class="btn btn-outline-dark" style="text-align: center;">
+                                                  Selengkapnya
                                              </a>
 
 
@@ -143,7 +136,7 @@
                                    </div>
                                    <!-- Single Product End Here -->
                               </div>
-                            <?php endforeach ?>
+                              <?php endforeach ?>
 
                          </div>
                     </div>
@@ -169,178 +162,171 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div> -->
+            </div> -->
+          </div>
 
-               <!-- New Arrival Products Start Here -->
-               <div class="new-arrival no-border-style ptb-90">
-                    <div class="container">
-                         <!-- Section Title Start -->
-                         <div class="section-title text-center">
-                              <h2 style="color:#CC9C27">Produk Terbaru</h2>
-                              <p style="color:#CC9C27">Produk terbaru kami ?</p>
-                         </div>
-                         <!-- Section Title End -->
-                         <div id="grid-view" class="tab-pane fade show active">
-                              <div class="row border-hover-effect ">
+          <!-- New Arrival Products Start Here -->
+          <div class="new-arrival no-border-style ptb-90">
+               <div class="container">
+                    <!-- Section Title Start -->
+                    <div class="section-title text-center">
+                         <h2 style="color:#CC9C27">Produk Terbaru</h2>
+                         <p style="color:#CC9C27">Produk terbaru kami ?</p>
+                    </div>
+                    <!-- Section Title End -->
+                    <div id="grid-view" class="tab-pane fade show active">
+                         <div class="row border-hover-effect ">
 
-                                   <?php 
+                              <?php 
                                    $this->db->order_by('id_produk', 'desc');
                                    $produk_new = $this->db->get('produk');
                                    foreach ($produk_new->result() as $produk): ?>
-                                        <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                                        <div class="single-makal-product">
-                                             <div class="pro-img">
-                                                  <a href="web/detail_produk/<?php echo $produk->id_produk ?>">
-                                                       <img src="image/produk/<?php echo $produk->foto ?>"
-                                                            alt="product-img">
-                                                  </a>
-                                                  <!-- <span class="sticker-new">Best Seller</span> -->
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                                   <div class="single-makal-product">
+                                        <div class="pro-img">
+                                             <a href="web/detail_produk/<?php echo $produk->id_produk ?>">
+                                                  <img src="image/produk/<?php echo $produk->foto ?>" alt="product-img">
+                                             </a>
+                                             <!-- <span class="sticker-new">Best Seller</span> -->
 
-                                             </div>
-                                             <div class="pro-content">
-                                                  <h4 class="pro-title">
-                                                       <a
-                                                            href="web/detail_produk/<?php echo $produk->id_produk ?>"><?php echo $produk->nama_produk ?></a>
-                                                  </h4>
-                                                  <a href="web/detail_produk/<?php echo $produk->id_produk ?>"><label>Rp.
-                                                            <?php echo number_format($produk->harga_jual) ?></label>
-                                                       <div class="rating">
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                       </div>
-                                                  </a>
-                                             </div>
                                         </div>
-                                        <!-- Single Product End Here -->
+                                        <div class="pro-content">
+                                             <h4 class="pro-title">
+                                                  <a
+                                                       href="web/detail_produk/<?php echo $produk->id_produk ?>"><?php echo $produk->nama_produk ?></a>
+                                             </h4>
+                                             <a href="web/detail_produk/<?php echo $skin->id_produk ?>" class="btn btn-outline-dark" style="text-align: center;">
+                                                  Selengkapnya
+                                             </a>
+                                        </div>
                                    </div>
-                                   <?php endforeach ?>
+                                   <!-- Single Product End Here -->
+                              </div>
+                              <?php endforeach ?>
 
+                         </div>
+                    </div>
+               </div>
+               <!-- New Arrival Products End Here -->
+
+               <!-- Our Best Seller Product Start Here -->
+               <div class="our-product pt-90">
+                    <div class="container">
+                         <!-- Section Title Start -->
+                         <div class="section-title text-center">
+                              <h2 style="color:#CC9C27">TESTIMONIAL</h2>
+                              <p>Our Testimonial& Review From Customer </p>
+                         </div>
+                         <div class="container-fluid">
+                              <div class="row" style="margin-top: 2%;">
+
+                                   <?php foreach ($this->db->get('testimoni')->result() as $moni): ?>
+
+                                   <div class="col-md-4 mb-sm-30">
+                                        <div class="single-banner">
+                                             <a href="<?php echo $moni->link ?>">
+                                                  <img src="image/testimoni/<?php echo $moni->foto ?>" alt="banner-img">
+                                             </a>
+                                        </div>
+                                   </div>
+
+                                   <?php endforeach ?>
                               </div>
                          </div>
                     </div>
-                    <!-- New Arrival Products End Here -->
+               </div>
+               <!-- Our Best Seller Product End Here -->
 
-                    <!-- Our Best Seller Product Start Here -->
-                    <div class="our-product pt-90">
-                         <div class="container">
+
+               <!-- Blog Area Start Here -->
+               <div class="blog-area ptb-90">
+                    <div class="container">
+                         <div class="main-blog-area">
                               <!-- Section Title Start -->
                               <div class="section-title text-center">
-                                   <h2 style="color:#CC9C27">TESTIMONIAL</h2>
-                                   <p>Our Testimonial& Review From Customer </p>
+                                   <h2 style="color:#CC9C27">FEED</h2>
+                                   <p>Our Feeds Instagram </p>
                               </div>
-                              <div class="container-fluid">
-                                   <div class="row" style="margin-top: 2%;">
-
-                                        <?php foreach ($this->db->get('testimoni')->result() as $moni): ?>
-
-                                        <div class="col-md-4 mb-sm-30">
-                                             <div class="single-banner">
-                                                  <a href="<?php echo $moni->link ?>">
-                                                       <img src="image/testimoni/<?php echo $moni->foto ?>" alt="banner-img">
-                                                  </a>
-                                             </div>
-                                        </div>
-
-                                        <?php endforeach ?>
-                                   </div>
+                              <!-- Section Title End -->
+                              <!-- Blog Activation Start -->
+                              <div class="col-sm-12">
+                                   <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                                   <div class="elfsight-app-93c857c9-9669-47f0-9cc4-3012d055a8c0"></div>
                               </div>
+                              <!-- Blog Activation End -->
                          </div>
                     </div>
-                    <!-- Our Best Seller Product End Here -->
-
-
-                    <!-- Blog Area Start Here -->
-                    <div class="blog-area ptb-90">
-                         <div class="container">
-                              <div class="main-blog-area">
-                                   <!-- Section Title Start -->
-                                   <div class="section-title text-center">
-                                        <h2 style="color:#CC9C27">FEED</h2>
-                                        <p>Our Feeds Instagram </p>
-                                   </div>
-                                   <!-- Section Title End -->
-                                   <!-- Blog Activation Start -->
-                                   <div class="col-sm-12">
-                                        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                                        <div class="elfsight-app-93c857c9-9669-47f0-9cc4-3012d055a8c0"></div>
-                                   </div>
-                                   <!-- Blog Activation End -->
-                              </div>
-                         </div>
-                         <!-- Container End -->
-                    </div>
-                    <!-- Blog Area End Here -->
-
-                    <!-- Testmonial Start Here -->
-                    <div class="blog-area ptb-90">
-                         <section>
-                              <div class="section-title text-center">
-                                   <h2 style="color:#CC9C27">Lokasi Kami</h2>
-                                   <p>di google maps </p>
-                              </div>
-                              <div class="goole-map">
-                                   <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4959.109530986801!2d106.78786464251654!3d-6.264413151119323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1d2544fa117%3A0x6375849bf50d070d!2sGLOWZA%20SKINCARE!5e0!3m2!1sid!2sid!4v1653036538056!5m2!1sid!2sid"
-                                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                              </div>
-                         </section>
-
-                    </div>
-                    <!-- Testmonial End Here -->
-
-
-                    <!-- Support Area End Here -->
-                    <!-- Footer Area Start Here -->
-                    <footer class="pb-35">
-                         <?php $this->load->view('web/footer'); ?>
-                    </footer>
-                    <!-- Footer Area End Here -->
-                    <!-- Quick View Content Start -->
-
-                    <!-- Quick View Content End -->
+                    <!-- Container End -->
                </div>
-               <!-- Main Wrapper End Here -->
+               <!-- Blog Area End Here -->
 
-               <!-- jquery 3.3.1 -->
-               <script src="front/assets/js/jquery-1.11.0.min.js"></script>
-               <!-- Countdown js -->
-               <script src="front/assets/js/jquery.countdown.min.js"></script>
-               <!-- Mobile menu js -->
-               <script src="front/assets/js/jquery.meanmenu.min.js"></script>
-               <!-- ScrollUp js -->
-               <script src="front/assets/js/jquery.scrollUp.js"></script>
-               <!-- Fancybox js -->
-               <script src="front/assets/js/jquery.fancybox.min.js"></script>
-               <!-- Jquery nice select js -->
-               <script src="front/assets/js/jquery.nice-select.min.js"></script>
-               <!-- Jquery ui price slider js -->
-               <script src="front/assets/js/jquery-ui.min.js"></script>
-               <!-- Owl carousel -->
-               <script src="front/assets/js/owl.carousel.min.js"></script>
-               <!-- Bootstrap popper js -->
-               <script src="front/assets/js/popper.min.js"></script>
-               <!-- Bootstrap js -->
-               <script src="front/assets/js/bootstrap.min.js"></script>
-               <!-- Plugin js -->
-               <script src="front/assets/js/plugins.js"></script>
-               <script src="front/assets/skin/webcam.js"></script>
-               <script src="front/assets/skin/skinanalyzer.min.js"></script>
-               <link href="front/cdn.jsdelivr.net/npm/select2%404.1.0-beta.1/dist/css/select2.min.css"
-                    rel="stylesheet" />
-               <script src="front/cdn.jsdelivr.net/npm/select2%404.1.0-beta.1/dist/js/select2.min.js"></script>
-               <!-- Main activaion js -->
-               <script type="text/javascript">
-               $(".comboBox").select2({
-                    placeholder: "Select Data",
-                    allowClear: true
-               });
-               </script>
-               <script src="front/assets/js/main.js"></script>
+               <!-- Testmonial Start Here -->
+               <div class="blog-area ptb-90">
+                    <section>
+                         <div class="section-title text-center">
+                              <h2 style="color:#CC9C27">Lokasi Kami</h2>
+                              <p>di google maps </p>
+                         </div>
+                         <div class="goole-map">
+                              <iframe
+                                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4959.109530986801!2d106.78786464251654!3d-6.264413151119323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1d2544fa117%3A0x6375849bf50d070d!2sGLOWZA%20SKINCARE!5e0!3m2!1sid!2sid!4v1653036538056!5m2!1sid!2sid"
+                                   width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                   referrerpolicy="no-referrer-when-downgrade"></iframe>
+                         </div>
+                    </section>
+
+               </div>
+               <!-- Testmonial End Here -->
+
+
+               <!-- Support Area End Here -->
+               <!-- Footer Area Start Here -->
+
+               <!-- Footer Area End Here -->
+               <!-- Quick View Content Start -->
+
+               <!-- Quick View Content End -->
+          </div>
+          <footer class="pb-35">
+               <?php $this->load->view('web/footer'); ?>
+          </footer>
+     </div>
+     <!-- Main Wrapper End Here -->
+
+     <!-- jquery 3.3.1 -->
+     <script src="front/assets/js/jquery-1.11.0.min.js"></script>
+     <!-- Countdown js -->
+     <script src="front/assets/js/jquery.countdown.min.js"></script>
+     <!-- Mobile menu js -->
+     <script src="front/assets/js/jquery.meanmenu.min.js"></script>
+     <!-- ScrollUp js -->
+     <script src="front/assets/js/jquery.scrollUp.js"></script>
+     <!-- Fancybox js -->
+     <script src="front/assets/js/jquery.fancybox.min.js"></script>
+     <!-- Jquery nice select js -->
+     <script src="front/assets/js/jquery.nice-select.min.js"></script>
+     <!-- Jquery ui price slider js -->
+     <script src="front/assets/js/jquery-ui.min.js"></script>
+     <!-- Owl carousel -->
+     <script src="front/assets/js/owl.carousel.min.js"></script>
+     <!-- Bootstrap popper js -->
+     <script src="front/assets/js/popper.min.js"></script>
+     <!-- Bootstrap js -->
+     <script src="front/assets/js/bootstrap.min.js"></script>
+     <!-- Plugin js -->
+     <script src="front/assets/js/plugins.js"></script>
+     <script src="front/assets/skin/webcam.js"></script>
+     <script src="front/assets/skin/skinanalyzer.min.js"></script>
+     <link href="front/cdn.jsdelivr.net/npm/select2%404.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+     <script src="front/cdn.jsdelivr.net/npm/select2%404.1.0-beta.1/dist/js/select2.min.js"></script>
+     <!-- Main activaion js -->
+     <script type="text/javascript">
+     $(".comboBox").select2({
+          placeholder: "Select Data",
+          allowClear: true
+     });
+     </script>
+     <script src="front/assets/js/main.js"></script>
 </body>
 
 </html>
