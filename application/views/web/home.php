@@ -58,14 +58,6 @@
      <!-- Modernizer js -->
      <link rel="stylesheet" href="front/assets/css/default/icofont.min.css">
      <script src="front/assets/js/vendor/modernizr-3.5.0.min.js"></script>
-     <style type="text/css">
-          /* Slider */
-          .carousel-item {
-            height: 100vh;
-            background-repeat: no-repeat;
-            background-size: cover;
-          }
-     </style>
 
 </head>
 
@@ -81,46 +73,41 @@
           <div class="slider-area">
                <!-- Slider -->
                <section class="slider-section">
-                    <div id="carousel" class="carousel slide" data-ride="carousel">
-                         <!-- Indicators -->
-                         <ol class="carousel-indicators">
-                              <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                              <li data-target="#carousel" data-slide-to="1"></li>
-                              <li data-target="#carousel" data-slide-to="2"></li>
-                              <li data-target="#carousel" data-slide-to="3"></li>
-                         </ol> <!-- End of Indicators -->
-
-                         <!-- Carousel Content -->
-                         <div class="carousel-inner" role="listbox">
-                              <?php foreach ($this->db->get('slider')->result() as $row): ?>
-                              <div class="carousel-item <?php echo ($row->id_slider==1) ? 'active' : '' ?>" style="background-image: url('front/assets/css/img/slider/<?php echo $row->foto ?>');">
-                                   
-                              </div> <!-- End of Carousel Item -->
-                              <?php endforeach ?>
-
-                              <!-- <div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg');">
-                                   <div class="carousel-caption d-none d-md-block">
-                                        <h3>Bridge Picture</h3>
-                                        <p>Awesome description for bridge.</p>
-                                   </div>
-                              </div>  -->
-                              <!-- End of Carousel Item -->
-
-                              
-                         </div> <!-- End of Carousel Content -->
-
-                         <!-- Previous & Next -->
-                         <a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only"></span>
-                         </a>
-                         <a href="#carousel" class="carousel-control-next" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only"></span>
-                         </a>
-                    </div> <!-- End of Carousel -->
+                    <div id="carousel-example-1z" class="carousel slide carousel-fade mb-5" data-ride="carousel">
+                <!--Indicators-->
+                     <ol class="carousel-indicators">
+                         <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+                         <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+                         <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+                         <li data-target="#carousel-example-1z" data-slide-to="3"></li>
+                     </ol>
+                     <!--/.Indicators-->
+                     <!--Slides-->
+                     <div class="carousel-inner" role="listbox">
+                         <?php foreach ($this->db->get('slider')->result() as $row): ?>
+                         <!--First slide-->
+                         <div class="carousel-item <?php echo ($row->id_slider==1) ? 'active' : '' ?>">
+                             <img class="d-block w-100" src="front/assets/css/img/slider/<?php echo $row->foto ?>" alt="First slide">
+                         </div>
+                         <?php endforeach ?>
+                         <!--/First slide-->
+                     </div>
+                     <!--/.Slides-->
+                     <!--Controls-->
+                     <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                         <span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                         <span class="sr-only">Next</span>
+                     </a>
+                     <!--/.Controls-->
+                 </div>
                </section> <!-- End of Slider -->
           </div>
+
+          
           <!-- Slider Area End -->
           <!-- New Product Banner End Here -->
           <div class="new-arrival no-border-style ptb-90">

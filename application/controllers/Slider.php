@@ -87,7 +87,7 @@ class Slider extends CI_Controller
             $this->update($this->input->post('id_slider', TRUE));
         } else {
             $data = array(
-		'foto' => $retVal = ($_FILES['foto']['name'] == '') ? $_POST['foto_old'] : upload_gambar_biasa_setname($_POST['foto_old'], 'front/assets/css/img/slider/', 'png', 10000, 'foto'),
+		'foto' => $retVal = ($_FILES['foto']['name'] == '') ? $_POST['foto_old'] : upload_gambar_biasa_setname($_POST['foto_old'], 'front/assets/css/img/slider/', 'jpg|jpeg|png', 10000, 'foto'),
 		'link' => $this->input->post('link',TRUE),
 	    );
 
