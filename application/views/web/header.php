@@ -8,22 +8,22 @@
                                 <ul>
                                     
                                     <li>
-                                        <a href="mailto:<?php echo get_data('setting','id_setting',1,'email') ?>"><i class="fa fa-envelope"></i> <span class="badge badge-success"><?php echo get_data('setting','id_setting',1,'email') ?></span></a>
+                                        <a href="mailto:<?php echo get_data('setting','id_setting',1,'email') ?>"><i class="fa fa-envelope"></i> <span><?php echo get_data('setting','id_setting',1,'email') ?></span></a>
                                     </li>
                                     <li>
                                         <ul class="social-icon">
                                             <li>
-                                                <a href="<?php echo get_data('setting','id_setting',1,'fb') ?>" class="badge badge-info">
+                                                <a href="<?php echo get_data('setting','id_setting',1,'fb') ?>">
                                                     <i class="fa fa-facebook" aria-hidden="true"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<?php echo get_data('setting','id_setting',1,'ig') ?>" class="badge badge-warning">
+                                                <a href="<?php echo get_data('setting','id_setting',1,'ig') ?>" >
                                                     <i class="fa fa-instagram" aria-hidden="true"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<?php echo get_data('setting','id_setting',1,'youtube') ?>" class="badge badge-danger">
+                                                <a href="<?php echo get_data('setting','id_setting',1,'youtube') ?>">
                                                     <i class="fa fa-youtube" aria-hidden="true"></i>
                                                 </a>
                                             </li>
@@ -37,7 +37,8 @@
                             <div class="header-top-right order-1 order-lg-2">
                                 <ul>
                                     <li>
-                                        <a href="login"> <span class="btn btn-sm btn-info">Member</span>
+                                        <a href="login">
+                                            Member
                                         </a>
                                     </li>
                                 </ul>

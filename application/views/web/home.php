@@ -58,6 +58,14 @@
      <!-- Modernizer js -->
      <link rel="stylesheet" href="front/assets/css/default/icofont.min.css">
      <script src="front/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+     <style type="text/css">
+          /* Slider */
+          .carousel-item {
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+     </style>
 
 </head>
 
@@ -71,30 +79,47 @@
           <!-- Main Header Area End Here -->
           <!-- Slider Area Start -->
           <div class="slider-area">
-               <!-- Slider Area Start Here -->
-               <div class="slider-activation owl-carousel">
-                    <!-- Start Single Slide -->
-                    <?php foreach ($this->db->get('slider')->result() as $slide): 
-                    $no = 1;
-                ?>
-                    <a href="<?php echo $slide->link ?>">
-                         <div class="slide align-center-left fullscreen animation-style-01 bg-image-<?php echo $no ?> ">
-                              <div class="slider-progress"></div>
-                              <div class="container">
-                                   <div class="row">
-                                        <div class="col-lg-12">
-                                             <div class="slider-content">
+               <!-- Slider -->
+               <section class="slider-section">
+                    <div id="carousel" class="carousel slide" data-ride="carousel">
+                         <!-- Indicators -->
+                         <ol class="carousel-indicators">
+                              <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                              <li data-target="#carousel" data-slide-to="1"></li>
+                              <li data-target="#carousel" data-slide-to="2"></li>
+                              <li data-target="#carousel" data-slide-to="3"></li>
+                         </ol> <!-- End of Indicators -->
 
-                                             </div>
-                                        </div>
+                         <!-- Carousel Content -->
+                         <div class="carousel-inner" role="listbox">
+                              <?php foreach ($this->db->get('slider')->result() as $row): ?>
+                              <div class="carousel-item <?php echo ($row->id_slider==1) ? 'active' : '' ?>" style="background-image: url('front/assets/css/img/slider/<?php echo $row->foto ?>');">
+                                   
+                              </div> <!-- End of Carousel Item -->
+                              <?php endforeach ?>
+
+                              <!-- <div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg');">
+                                   <div class="carousel-caption d-none d-md-block">
+                                        <h3>Bridge Picture</h3>
+                                        <p>Awesome description for bridge.</p>
                                    </div>
-                              </div>
-                         </div>
-                    </a>
-                    <?php $no++; endforeach ?>
-                    <!-- End Single Slide -->
-               </div>
-               <!-- Slider Area End Here -->
+                              </div>  -->
+                              <!-- End of Carousel Item -->
+
+                              
+                         </div> <!-- End of Carousel Content -->
+
+                         <!-- Previous & Next -->
+                         <a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only"></span>
+                         </a>
+                         <a href="#carousel" class="carousel-control-next" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only"></span>
+                         </a>
+                    </div> <!-- End of Carousel -->
+               </section> <!-- End of Slider -->
           </div>
           <!-- Slider Area End -->
           <!-- New Product Banner End Here -->
