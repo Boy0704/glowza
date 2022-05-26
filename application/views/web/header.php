@@ -34,11 +34,11 @@
                             </div>
                             <!-- Header Top Left End -->
                             <!-- Header Top Right Start -->
-                            <div class="header-top-right order-1 order-lg-2">
+                            <div class="header-top-right order-1 order-lg-1">
                                 <ul>
                                     <li>
                                         <a href="login">
-                                            Member
+                                           Login Member 
                                         </a>
                                     </li>
                                 </ul>
