@@ -96,7 +96,7 @@ $point_saya = point_saya($id_member);
           <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
           <button class="btn btn-success btn-block" data-clipboard-action="copy"
       data-clipboard-target="#myInput">Copy Link Referal</button>
-          <input type="text" value="<?php echo base_url() ?>app/referal/<?php echo get_data('member','id_member',$id_member,'kode_member') ?>" id="myInput" class="form-control">
+          <input type="text" value="<?php echo base_url() ?>app/agen/<?php echo get_data('member','id_member',$id_member,'kode_member') ?>" id="myInput" class="form-control">
      </div>
      <script>
       var clipboard = new ClipboardJS('.btn');

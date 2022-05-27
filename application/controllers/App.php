@@ -23,6 +23,87 @@ class App extends CI_Controller {
           $this->load->view('v_index', $data);
      }
 
+     public function agen($kode_member_agen)
+     {
+          if ($_POST) {
+               $kode_member = kode_member();
+                  $this->_rules();
+
+                  if ($this->form_validation->run() == FALSE) {
+                      $this->pendaftaran();
+                  } else {
+
+                         $foto = upload_gambar_biasa('user', 'image/user/', 'jpg|png|jpeg', 10000, 'foto');
+                    $foto_identitas = upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_indentitas');
+
+                      $data = array(
+                    'kode_member' => $kode_member,
+                    'nama_lengkap' => $this->input->post('nama_lengkap',TRUE),
+                    'foto' => $foto,
+                    'foto_identitas' => $foto_identitas,
+                    'email' => $this->input->post('email',TRUE),
+                    'no_telp' => $this->input->post('no_telp',TRUE),
+                    'instagram' => $this->input->post('instagram',TRUE),
+                    'facebook' => $this->input->post('facebook',TRUE),
+                    'shopee' => $this->input->post('shopee',TRUE),
+                    'tokopedia' => $this->input->post('tokopedia',TRUE),
+                    'bukalapak' => $this->input->post('bukalapak',TRUE),
+                    'lazada' => $this->input->post('lazada',TRUE),
+                    'jenis_identitas' => $this->input->post('jenis_identitas',TRUE),
+                    'no_identitas' => $this->input->post('no_identitas',TRUE),
+                    'nama_bank' => $this->input->post('nama_bank',TRUE),
+                    'no_rekening' => $this->input->post('no_rekening',TRUE),
+                    'atas_nama' => $this->input->post('atas_nama',TRUE),
+                    'alamat' => $this->input->post('alamat',TRUE),
+                    'id_kabupaten' => $this->input->post('id_kabupaten',TRUE),
+                    'username' => $this->input->post('username',TRUE),
+                    'password' => $this->input->post('password',TRUE),
+                    'upline' => get_data('member','kode_member',$this->uri->segment(3),'id_member'),
+                    'level' => $this->input->post('level',TRUE),
+                    'created_at' => get_waktu(),
+                   );
+                      $this->load->model('Member_model');
+                      $this->Member_model->insert($data);
+                      $this->qrcode($kode_member);
+                      $this->session->set_flashdata('pesan', alert_biasa('Pendaftaran Berhasil','success'));
+                         redirect("login");
+                    }
+          } else {
+               $this->load->library('form_validation');
+             $data = array(
+                 'judul_page' => 'Pendaftaran',
+                 'konten' => 'member/member_form',
+                 'judul_form' => 'Tambah '.'Pendaftaran',
+                 'button' => 'Simpan',
+                 'action' => site_url('app/simpan_pendaftaran'),
+              'id_member' => set_value('id_member'),
+              'kode_member' => kode_member(),
+              'nama_lengkap' => set_value('nama_lengkap'),
+              'foto' => set_value('foto'),
+              'foto_identitas' => set_value('foto_identitas'),
+              'email' => set_value('email'),
+              'no_telp' => set_value('no_telp'),
+              'instagram' => set_value('instagram'),
+              'facebook' => set_value('facebook'),
+              'shopee' => set_value('shopee'),
+              'tokopedia' => set_value('tokopedia'),
+              'bukalapak' => set_value('bukalapak'),
+              'lazada' => set_value('lazada'),
+              'jenis_identitas' => set_value('jenis_identitas'),
+              'no_identitas' => set_value('no_identitas'),
+              'nama_bank' => set_value('nama_bank'),
+              'no_rekening' => set_value('no_rekening'),
+              'atas_nama' => set_value('atas_nama'),
+              'alamat' => set_value('alamat'),
+              'id_kabupaten' => set_value('id_kabupaten'),
+              'username' => set_value('username'),
+              'password' => set_value('password'),
+              'level' => set_value('level'),
+          );
+             $this->load->view('referal', $data);
+          }
+     }
+
 
      public function baca_notifikasi($id_notifikasi)
      {
@@ -173,7 +254,7 @@ class App extends CI_Controller {
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
-            $this->create();
+            $this->pendaftaran();
         } else {
 
                $foto = upload_gambar_biasa('user', 'image/user/', 'jpg|png|jpeg', 10000, 'foto');
@@ -201,6 +282,7 @@ class App extends CI_Controller {
           'id_kabupaten' => $this->input->post('id_kabupaten',TRUE),
           'username' => $this->input->post('username',TRUE),
           'password' => $this->input->post('password',TRUE),
+          'upline' => $this->session->userdata('id_user'),
           'level' => $this->input->post('level',TRUE),
           'created_at' => get_waktu(),
          );
