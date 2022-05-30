@@ -25,6 +25,11 @@ class App extends CI_Controller {
 
      public function agen($kode_member_agen)
      {
+          $this->load->view('agent');
+     }
+
+     public function agen_old($kode_member_agen)
+     {
           if ($_POST) {
                $kode_member = kode_member();
                   $this->_rules();
