@@ -391,6 +391,15 @@ class App extends CI_Controller {
           redirect("app");
      }
 
+     public function verifikasi($kode_member=null)
+     {
+          if ($kode_member == null) {
+               redirect("web");
+          } else {
+               $this->load->view('verified');
+          }
+     }
+
      public function qrcode($kode_member=null)
      {
           if ($kode_member == null) {
