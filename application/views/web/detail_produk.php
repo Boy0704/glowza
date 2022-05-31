@@ -127,7 +127,7 @@
                                 
                             </ul>
                             <div class="pro-thumb-price mt-10">
-                                <p class="d-flex align-items-center"><span class="price">Rp. 120,000</span></p>
+                                <p class="d-flex align-items-center"><span class="price">Rp. <?php echo number_format($produk->harga_jual) ?></span></p>
                             </div>
                             <hr>
                             <h6 style="font-weight: 800">Deskirpsi Produk : </h6>
