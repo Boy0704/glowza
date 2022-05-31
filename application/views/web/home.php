@@ -65,6 +65,31 @@
 
      <div class="wrapper">
 
+          <!-- Newsletter Popup Start -->
+          <div class="popup_wrapper">
+            <div class="test" style="background-image: url(front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Image/bg-hero.jpg);background-position-x: 9px;background-size: cover; ">
+                <span class="popup_off"> X </span>
+                <div class="subscribe_area mt-40">
+                    <h3 style="color:#ef7878;font-weight: 700;margin-bottom: 12px;">Join Our Newsletter !</h3>
+                    <p style="color:#808080"> 
+                        Yuk Subscribe untuk terus mendapatkan info / promo <br> 
+                        <!-- update terbaru dari pusat ! kita juga akan berbagi <br>
+                        info info lainnya dalam mailing list ini ! -->
+                    </p>
+                    <div class="subscribe-form-group">
+                        <form action="web/subs" method="POST">
+                            <input autocomplete="off" type="text" name="cEmail" id="message" placeholder="Masukkan email kamu disini!">
+                            <button type="submit">subscribe sekarang</button>
+                        </form>
+                    </div>
+                    <!-- <div class="subscribe-bottom mt-15">
+                        <input type="checkbox" id="newsletter-permission">
+                        <label for="newsletter-permission" style="color:#8f8c8c">Don't show this popup again</label>
+                    </div> -->
+                </div>
+            </div>
+          </div>
+
           <header>
                <?php $this->load->view('web/header'); ?>
           </header>
@@ -195,7 +220,7 @@
                          
                          <!--First slide-->
                          <div class="carousel-item active">
-                             <img class="d-block w-100" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/222641/iStockStreetScene.jpg" alt="First slide">
+                             <img class="d-block w-100" src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Image/bg-hero.jpg" alt="First slide">
                          </div>
                          
                          <!--/First slide-->
