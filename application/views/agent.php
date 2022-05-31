@@ -330,7 +330,7 @@
                          <div
                               class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ">
                               <img alt="..."
-                                   src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/talk-women.png"
+                                   src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/women.jpg"
                                    class="w-full align-middle rounded-t-lg" />
 
                          </div>
