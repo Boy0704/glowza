@@ -180,44 +180,39 @@
           <!-- New Arrival Products Start Here -->
           <div class="new-arrival no-border-style ptb-90">
                <div class="container">
-                    <!-- Section Title Start -->
-                    <div class="section-title text-center">
-                         <h2 style="color:#CC9C27">Produk Terbaru</h2>
-                         <p style="color:#CC9C27">Produk terbaru kami ?</p>
-                    </div>
-                    <!-- Section Title End -->
-                    <div id="grid-view" class="tab-pane fade show active">
-                         <div class="row border-hover-effect ">
-
-                              <?php 
-                                   $this->db->order_by('id_produk', 'desc');
-                                   $produk_new = $this->db->get('produk');
-                                   foreach ($produk_new->result() as $produk): ?>
-                              <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                                   <div class="single-makal-product">
-                                        <div class="pro-img">
-                                             <a href="web/detail_produk/<?php echo $produk->id_produk ?>">
-                                                  <img src="image/produk/<?php echo $produk->foto ?>" alt="product-img">
-                                             </a>
-                                             <!-- <span class="sticker-new">Best Seller</span> -->
-
-                                        </div>
-                                        <div class="pro-content">
-                                             <h4 class="pro-title">
-                                                  <a
-                                                       href="web/detail_produk/<?php echo $produk->id_produk ?>"><?php echo $produk->nama_produk ?></a>
-                                             </h4>
-                                             <a href="web/detail_produk/<?php echo $skin->id_produk ?>" class="btn btn-outline-dark" style="text-align: center;">
-                                                  Selengkapnya
-                                             </a>
-                                        </div>
-                                   </div>
-                                   <!-- Single Product End Here -->
-                              </div>
-                              <?php endforeach ?>
-
+                   <section class="slider-section">
+                    <div id="carousel-example-1z" class="carousel slide carousel-fade mb-5" data-ride="carousel">
+                <!--Indicators-->
+                     <ol class="carousel-indicators">
+                         <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+                         <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+                         <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+                         <li data-target="#carousel-example-1z" data-slide-to="3"></li>
+                     </ol>
+                     <!--/.Indicators-->
+                     <!--Slides-->
+                     <div class="carousel-inner" role="listbox">
+                         
+                         <!--First slide-->
+                         <div class="carousel-item active">
+                             <img class="d-block w-100" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/222641/iStockStreetScene.jpg" alt="First slide">
                          </div>
-                    </div>
+                         
+                         <!--/First slide-->
+                     </div>
+                     <!--/.Slides-->
+                     <!--Controls-->
+                     <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                         <span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                         <span class="sr-only">Next</span>
+                     </a>
+                     <!--/.Controls-->
+                 </div>
+               </section> <!-- End of Slider -->
                </div>
                <!-- New Arrival Products End Here -->
 
