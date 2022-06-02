@@ -67,7 +67,7 @@
 
           <!-- Newsletter Popup Start -->
           <div class="popup_wrapper">
-            <div class="test" style="background-image: url(front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Image/bg-hero.jpg);background-position-x: 9px;background-size: cover; ">
+            <div class="test" style="background-image: url(front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Image/bg-hero.jpg);background-position-x: 9px;background-size: cover; background-repeat: no-repeat; ">
                 <span class="popup_off"> X </span>
                 <div class="subscribe_area mt-40">
                     <h3 style="color:#ef7878;font-weight: 700;margin-bottom: 12px;">Join Our Newsletter !</h3>

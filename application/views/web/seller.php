@@ -105,7 +105,7 @@
                                                                  
                                                                  
                                                             </select> &nbsp;&nbsp;&nbsp;&nbsp;
-                                                            <button type="submit" class="btn btn-primary">Cari
+                                                            <button type="submit" class="btn" style="color:  white;background-color:#CC9C27; border-radius: 20px;">Cari
                                                                  Seller</button>
 
                                                        </div>
@@ -126,7 +126,7 @@
                                                             <label style="width:60% !important">CARI SELLER : </label>
                                                             <input type="text" name="id_seller" class="form-control"
                                                                  placeholder="ID Seller Atau Nama">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                            <button type="submit" class="btn btn-primary">Cari
+                                                            <button type="submit" class="btn" style="color:  white;background-color:#CC9C27; border-radius: 20px;">Cari
                                                                  Seller</button>
 
                                                        </div>

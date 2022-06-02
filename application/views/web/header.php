@@ -58,7 +58,7 @@
                         <div class="col-xl-3 col-lg-2 col-6">
                             <div class="logo">
                                 <a href="">
-                                    <img src="front/assets/logo.png" alt="logo-image" style="width: 130px; height: 30px; margin: 20px;">
+                                    <img src="front/assets/logo.png" alt="logo-image" style="width: 230px; ">
                                 </a>
                             </div>
                         </div>
