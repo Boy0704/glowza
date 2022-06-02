@@ -41,11 +41,11 @@
                                    </p>
                               </div>
                               <div id="button" class="mt-10 my-2  flex flex-wrap gap-2">
-                                   <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $no_telp ?>&amp;text="
+                                   <a target="_blank" href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
                                         data-message="Saya ada tertarik dengan produk glowza. Apakah bisa dibantu?"
                                         class="member_mobilephone_themes_agen bg-blue-400 text-white active:bg-pink-600 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         id="wa-buy"><span class="text-xs" id="wa-buy">Beli Sekarang</span></a>
-                                   <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $no_telp ?>&amp;text="
+                                   <a target="_blank" href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
                                         data-message="Saya tertarik bergabung dengan glowza. Apakah bisa dibantu?"
                                         class="member_mobilephone_themes_agen bg-green-400 text-white active:bg-pink-600 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         id="wa-join"><span class="text-xs">Gabung Menjadi Mitra</span></a>
@@ -212,7 +212,7 @@
                               <?php echo $skin->deskripsi ?>
                          </div>
                          <div class="block"><a
-                                   target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $no_telp ?>&amp;text="
+                                   target="_blank" href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
                                    data-message="Saya ada tertarik dengan produk Body Spray Lotion. Apakah bisa dibantu?"
                                    id="wa-buy"
                                    class="member_mobilephone_themes_agen bg-blue-400 text-white active:bg-pink-600 font-bold  text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -320,7 +320,7 @@
                               Mudah banget loh, kamu hanya dengan order 3 paket Reseller, otomatis
                               kamu menjadi bagian dari Glowza Skincare
                          </p>
-                         <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $no_telp ?>&amp;text="
+                         <a target="_blank" href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
                               data-message="Saya ada tertarik dengan produk glowza. Apakah bisa dibantu?" id="wa-buy"
                               class="member_mobilephone_themes_agen bg-blue-400 text-white active:bg-pink-600 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                               Beli Sekarang
@@ -1199,7 +1199,7 @@
      </section>
 
      <div class="whatsapp fixed bottom-5 right-5 z-50">
-          <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $no_telp ?>&amp;text="
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
                data-message="Saya ada tertarik dengan glowza. Apakah bisa dibantu?" id="wa-contact" target="_blank"
                class="wa-ask member_mobilephone_themes_agen" data-tip data-for="whatsapp">
                <svg viewBox="0 0 32 32" class="whatsapp-icon rounded-full ">
@@ -1217,7 +1217,7 @@
                     kami untuk mendapatkan berbagai keuntungannyaa!
                </h1>
                <div class="my-5">
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $no_telp ?>&amp;text="
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
                          data-message="Saya ada ada pertanyaan mengenai glowza. Apakah bisa dibantu?" id="wa-buy"
                          class="member_mobilephone_themes_agen  bg-blue-400 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                          id="wa-contact">

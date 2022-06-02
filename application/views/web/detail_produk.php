@@ -157,7 +157,7 @@
                                   </div>
                                   <div class="modal-body">
                                     <a href="web/seller" target="_blank" class="btn btn-outline-dark btn-block"><i class="fa fa-shopping-cart"></i> Beli Produk Ke Member Kami</a>
-                                    <a href="https://api.whatsapp.com/send?phone=<?php echo get_data('setting','id_setting',1,'no_telp') ?>&amp;text=hallo kak, saya mau tanya produk <?php echo $produk->nama_produk ?>" target="_blank" class="btn btn-outline-dark btn-block"><i class="fa fa-comment"></i> Tanya Produk Ke Customer Service</a>
+                                    <a href="https://api.whatsapp.com/send?phone=+62<?php echo get_data('setting','id_setting',1,'no_telp') ?>&amp;text=hallo kak, saya mau tanya produk <?php echo $produk->nama_produk ?>" target="_blank" class="btn btn-outline-dark btn-block"><i class="fa fa-comment"></i> Tanya Produk Ke Customer Service</a>
                                   </div>
                                 </div>
                               </div>

@@ -202,7 +202,7 @@
                                                                            <td>
                                                                                 <?php if ($row->no_telp != ''): ?>
                                                                                 <a
-                                                                                     href="https://api.whatsapp.com/send?phone=+<?php echo $row->no_telp ?>&text=Hai Saya tertarik untuk membeli produk GLOWZA" target="_blank">Hubungi
+                                                                                     href="https://api.whatsapp.com/send?phone=+62<?php echo $row->no_telp ?>&text=Hai Saya tertarik untuk membeli produk GLOWZA" target="_blank">Hubungi
                                                                                      Saya</a>
                                                                                 <?php endif ?>
 
