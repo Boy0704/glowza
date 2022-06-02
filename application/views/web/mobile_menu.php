@@ -20,6 +20,9 @@
                                     <a href="Website/Halaman/our_product/SpotTreatment.html">Ms Cosmetic</a>
                                  </li> -->
                                  <li>
+                                    <a href="web/produk">Produk Kami</a>
+                                 </li>
+                                 <li>
                                     <a href="web/about">Tentang Kami</a>
                                  </li>
                                  <li>

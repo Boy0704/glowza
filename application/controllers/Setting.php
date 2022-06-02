@@ -41,6 +41,7 @@ class Setting extends CI_Controller
 	    'deskripsi' => set_value('deskripsi'),
 	    'alamat' => set_value('alamat'),
 	    'email' => set_value('email'),
+        'no_telp' => set_value('no_telp'),
 	    'jam_kerja' => set_value('jam_kerja'),
 	    'fb' => set_value('fb'),
 	    'ig' => set_value('ig'),
@@ -62,6 +63,7 @@ class Setting extends CI_Controller
 		'deskripsi' => $this->input->post('deskripsi',TRUE),
 		'alamat' => $this->input->post('alamat',TRUE),
 		'email' => $this->input->post('email',TRUE),
+        'no_telp' => $this->input->post('no_telp',TRUE),
 		'jam_kerja' => $this->input->post('jam_kerja',TRUE),
 		'fb' => $this->input->post('fb',TRUE),
 		'ig' => $this->input->post('ig',TRUE),
@@ -91,6 +93,7 @@ class Setting extends CI_Controller
 		'deskripsi' => set_value('deskripsi', $row->deskripsi),
 		'alamat' => set_value('alamat', $row->alamat),
 		'email' => set_value('email', $row->email),
+        'no_telp' => set_value('no_telp', $row->no_telp),
 		'jam_kerja' => set_value('jam_kerja', $row->jam_kerja),
 		'fb' => set_value('fb', $row->fb),
 		'ig' => set_value('ig', $row->ig),
@@ -116,6 +119,7 @@ class Setting extends CI_Controller
 		'deskripsi' => $this->input->post('deskripsi',TRUE),
 		'alamat' => $this->input->post('alamat',TRUE),
 		'email' => $this->input->post('email',TRUE),
+        'no_telp' => $this->input->post('no_telp',TRUE),
 		'jam_kerja' => $this->input->post('jam_kerja',TRUE),
 		'fb' => $this->input->post('fb',TRUE),
 		'ig' => $this->input->post('ig',TRUE),
@@ -148,6 +152,7 @@ class Setting extends CI_Controller
 	$this->form_validation->set_rules('deskripsi', 'deskripsi', 'trim|required');
 	$this->form_validation->set_rules('alamat', 'alamat', 'trim|required');
 	$this->form_validation->set_rules('email', 'email', 'trim|required');
+    $this->form_validation->set_rules('no_telp', 'No Telp', 'trim|required');
 	$this->form_validation->set_rules('jam_kerja', 'jam kerja', 'trim|required');
 	$this->form_validation->set_rules('fb', 'fb', 'trim|required');
 	$this->form_validation->set_rules('ig', 'ig', 'trim|required');

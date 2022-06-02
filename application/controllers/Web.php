@@ -40,6 +40,11 @@ class Web extends CI_Controller {
           $this->load->view('web/about_us');
      }
 
+     public function produk()
+     {
+          $this->load->view('web/produk');
+     }
+
      public function detail_produk($id)
      {
           $this->load->view('web/detail_produk');

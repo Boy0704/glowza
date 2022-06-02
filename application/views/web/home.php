@@ -19,7 +19,7 @@
      <meta property="og:description"
           content="GLOWZA OFFICIAL WEBSITE – Brand Skincare ternama di Indonesia yang dapat memenuhi kebutuhan kulitmu mulai dari perawata wajah hingga tubuhmu." />
      <meta property="og:image" content="assets/img/logo/logo.png" />
-     <meta name="facebook-domain-verification" content="c763mnwndxid07oynvu3hm90meuf9y" />
+     <!-- <meta name="facebook-domain-verification" content="c763mnwndxid07oynvu3hm90meuf9y" /> -->
      <meta name="twitter:card" content="summary_large_image">
      <meta name="twitter:site" content="index.html">
      <meta name="twitter:creator" content="">
@@ -112,7 +112,9 @@
                          <?php foreach ($this->db->get('slider')->result() as $row): ?>
                          <!--First slide-->
                          <div class="carousel-item <?php echo ($row->id_slider==1) ? 'active' : '' ?>">
-                             <img class="d-block w-100" src="front/assets/css/img/slider/<?php echo $row->foto ?>" alt="First slide">
+                             <a href="<?php echo $row->link ?>" target="_blank">
+                                  <img class="d-block w-100" src="front/assets/css/img/slider/<?php echo $row->foto ?>" alt="First slide">
+                             </a>
                          </div>
                          <?php endforeach ?>
                          <!--/First slide-->
@@ -238,6 +240,45 @@
                      <!--/.Controls-->
                  </div>
                </section> <!-- End of Slider -->
+
+               <!-- Section Title Start -->
+                    <div class="section-title text-center">
+                         <h2 style="color:#CC9C27">Produk Kami</h2>
+                         <p style="color:#CC9C27">Produk terbaru kami ?</p>
+                    </div>
+                    <!-- Section Title End -->
+                    <div id="grid-view" class="tab-pane fade show active">
+                         <div class="row border-hover-effect ">
+
+                              <?php 
+                                   $this->db->order_by('id_produk', 'desc');
+                                   $produk_new = $this->db->get('produk');
+                                   foreach ($produk_new->result() as $produk): ?>
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                                   <div class="single-makal-product">
+                                        <div class="pro-img">
+                                             <a href="web/detail_produk/<?php echo $produk->id_produk ?>">
+                                                  <img src="image/produk/<?php echo $produk->foto ?>" alt="product-img">
+                                             </a>
+                                             <!-- <span class="sticker-new">Best Seller</span> -->
+
+                                        </div>
+                                        <div class="pro-content">
+                                             <h4 class="pro-title">
+                                                  <a
+                                                       href="web/detail_produk/<?php echo $produk->id_produk ?>"><?php echo $produk->nama_produk ?></a>
+                                             </h4>
+                                             <a href="web/detail_produk/<?php echo $produk->id_produk ?>" class="btn btn-outline-dark" style="text-align: center;">
+                                                  Selengkapnya
+                                             </a>
+                                        </div>
+                                   </div>
+                                   <!-- Single Product End Here -->
+                              </div>
+                              <?php endforeach ?>
+
+                         </div>
+                    </div>
                </div>
                <!-- New Arrival Products End Here -->
 

@@ -63,6 +63,16 @@
                               value="<?php echo $email; ?>" />
                     </div>
                </div>
+     <div class="row mb-3">
+                    <label for="jam_kerja" class="col-sm-3
+                         col-form-label">No Telp
+                         <?php echo form_error('no_telp') ?></label>
+                    <div class="col-sm-9">
+                         <input type="text" class="form-control" name="no_telp"
+                              id="no_telp" placeholder="No Telp"
+                              value="<?php echo $no_telp; ?>" />
+                    </div>
+               </div>
 	 <div class="row mb-3">
                     <label for="jam_kerja" class="col-sm-3
                          col-form-label">Jam Kerja
