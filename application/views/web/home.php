@@ -323,8 +323,9 @@
                               <!-- Section Title End -->
                               <!-- Blog Activation Start -->
                               <div class="col-sm-12">
-                                   <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                                   <div class="elfsight-app-93c857c9-9669-47f0-9cc4-3012d055a8c0"></div>
+                                   <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                                   <div class="elfsight-app-93c857c9-9669-47f0-9cc4-3012d055a8c0"></div> -->
+                                   <div class="embedsocial-hashtag" data-ref="d7a7e553f9af6982064da795d97f23eae44da8fa"><a class="feed-powered-by-es" href="https://embedsocial.com/social-media-aggregator/" target="_blank" title="Widget by EmbedSocial">Widget by EmbedSocial<span>→</span></a></div><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialHashtagScript"));</script>
                               </div>
                               <!-- Blog Activation End -->
                          </div>
