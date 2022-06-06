@@ -89,7 +89,7 @@
                <div class="col-span-2 lg:col-span-1 w-full lg:w-full mx-auto">
                     <ul class="list-none mt-6 space-y-5">
                          <li class="py-2 rounded-xl border-2 "
-                              style="background-color: #fcf7f8; border-color: #e9c6cf;">
+                              style="background-color: #fcf7f8; border-color: #CC9C27;">
                               <div class="flex items-center gap-5 ml-5">
                                    <div>
                                         <svg class="w-6 h-6 text-red-300" fill="currentColor" viewBox="0 0 20 20"
@@ -107,7 +107,7 @@
                               </div>
                          </li>
                          <li class="py-2  rounded-xl border-2 "
-                              style="background-color: #fcf7f8; border-color: #e9c6cf;">
+                              style="background-color: #fcf7f8; border-color: #CC9C27;">
                               <div class="flex items-center gap-5 ml-5">
                                    <div>
                                         <svg class="w-6 h-6 text-red-300" fill="currentColor" viewBox="0 0 20 20"
@@ -125,7 +125,7 @@
                               </div>
                          </li>
                          <li class="py-2  rounded-xl border-2 "
-                              style="background-color: #fcf7f8; border-color: #e9c6cf;">
+                              style="background-color: #fcf7f8; border-color: #CC9C27;">
                               <div class="flex items-center gap-5 ml-5">
                                    <div>
                                         <svg class="w-6 h-6 text-red-300" fill="currentColor" viewBox="0 0 20 20"
@@ -177,13 +177,13 @@
      <section id="section_4" class="my-20 w-full bg-cover ">
           <div class="text-center my-8 mx-auto container ">
 
-               <p style="color: #f29b96;" class="font-ramaraja text-center text-lg  md:text-3xl ">Mereka menyebut kami
+               <p style="color: #CC9C27;" class="font-ramaraja text-center text-lg  md:text-3xl ">Mereka menyebut kami
                </p>
                <p style="color: #8c4646;" class="font-ramaraja ext-center text-2xl md:text-2xl my-1 uppercase">
                     "Spesialist Flek Menahun" </p>
-               <p style="color: #f29b96;" class="font-ramaraja text-center text-lg  md:text-3xl">Bukan tanpa alasan
+               <p style="color: #CC9C27;" class="font-ramaraja text-center text-lg  md:text-3xl">Bukan tanpa alasan
                     tetapi suda ribuan orang </p>
-               <p style="color: #f29b96;" class="font-ramaraja text-center text-lg  md:text-3xl"> membuktikan kehebatan
+               <p style="color: #CC9C27;" class="font-ramaraja text-center text-lg  md:text-3xl"> membuktikan kehebatan
                     produk Glowza Skincare</p>
           </div>
           <div style="width: 90vw;" class=" displayCard  gap-5 grid lg:mx-auto">
@@ -274,28 +274,13 @@
                     <div class="swiper mySwiper container mx-auto">
                          <!-- Additional required wrapper -->
                          <div class="swiper-wrapper ">
+                              <?php foreach ($this->db->get('testimoni')->result() as $moni): ?>
+                              
                               <!-- Slides -->
                               <div class="swiper-slide"><img
-                                        src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Testimoni/testi-1.jpg"
+                                        src="image/testimoni/<?php echo $moni->foto ?>"
                                         alt="" class="rounded-xl border-2 border-red-300 overflow-hidden"></div>
-                              <div class="swiper-slide"><img
-                                        src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Testimoni/testi-2.jpg"
-                                        alt="" class="rounded-xl border-2 border-red-300 overflow-hidden"></div>
-                              <div class="swiper-slide"><img
-                                        src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Testimoni/testi-3.jpg"
-                                        alt="" class="rounded-xl border-2 border-red-300 overflow-hidden"></div>
-                              <div class="swiper-slide"><img
-                                        src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Testimoni/testi-4.jpg"
-                                        alt="" class="rounded-xl border-2 border-red-300 overflow-hidden"></div>
-                              <div class="swiper-slide"><img
-                                        src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Testimoni/testi-5.jpg"
-                                        alt="" class="rounded-xl border-2 border-red-300 overflow-hidden"></div>
-                              <div class="swiper-slide"><img
-                                        src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Testimoni/testi-6.jpg"
-                                        alt="" class="rounded-xl border-2 border-red-300 overflow-hidden"></div>
-                              <div class="swiper-slide"><img
-                                        src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Testimoni/testi-7.jpg"
-                                        alt="" class="rounded-xl border-2 border-red-300 overflow-hidden"></div>
+                              <?php endforeach ?>
                          </div>
                          <!-- If we need pagination -->
                          <div class="swiper-pagination"></div>
