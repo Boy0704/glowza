@@ -41,11 +41,13 @@
                                    </p>
                               </div>
                               <div id="button" class="mt-10 my-2  flex flex-wrap gap-2">
-                                   <a target="_blank" href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
+                                   <a target="_blank"
+                                        href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
                                         data-message="Saya ada tertarik dengan produk glowza. Apakah bisa dibantu?"
                                         class="member_mobilephone_themes_agen bg-blue-400 text-white active:bg-pink-600 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         id="wa-buy"><span class="text-xs" id="wa-buy">Beli Sekarang</span></a>
-                                   <a target="_blank" href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
+                                   <a target="_blank"
+                                        href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
                                         data-message="Saya tertarik bergabung dengan glowza. Apakah bisa dibantu?"
                                         class="member_mobilephone_themes_agen bg-green-400 text-white active:bg-pink-600 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         id="wa-join"><span class="text-xs">Gabung Menjadi Mitra</span></a>
@@ -187,43 +189,286 @@
                     produk Glowza Skincare</p>
           </div>
           <div style="width: 90vw;" class=" displayCard  gap-5 grid lg:mx-auto">
-               <!-- 1  body lotion-->
-
-               <?php 
-                $this->db->where('id_paket', 1);
-                $skincare = $this->db->get('produk');
-                foreach ($skincare->result() as $skin): ?>
-               <div
-                    class="card bg-card-light bg-cover bg-no-repeat flex  py-5   rounded-xl   mx-auto lg:mx-0  justify-between  gap-1 px-3 ">
+               <!-- 1  Day Cream-->
+               <div class="card bg-card-light bg-cover bg-no-repeat flex  py-5   rounded-xl   mx-auto lg:mx-0  justify-between  gap-1 px-3 ">
                     <div id="imageDisplay" class=" my-auto mx-auto">
-                         <img src="image/produk/<?php echo $skin->foto ?>"
-                              class="mx-auto w-1/3 lg:w-2/4">
+                         <img src="front_agen/img/DAY_CREAM.png" class="mx-auto w-1/3 lg:w-2/4">
                          <div class="text-center"><span
-                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp. <?php echo number_format($skin->harga_jual) ?></span>
+                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.110.000</span>
                          </div>
                     </div>
                     <div id="desc-wrapper mx-5">
                          <div class="border-b-2 border-text-spot" style=" border-color: #8c4646;">
-                              <h1 class="font-ramaraja bold text-2xl font-roboto " style="color: white"><?php echo $skin->nama_produk ?></h1>
+                              <h1 class="font-ramaraja bold text-2xl font-roboto " style="color: white">GLOWZA DAY CREAM</h1>
                          </div>
-                         <h3 class="text-sm font-roboto py-1 text-white  font-semibold" style=" color: white">Deskripsi
+                         <h3 class="text-sm font-roboto py-1 text-white  font-semibold" style=" color: white">Manfaat
                               produk:</h3>
-                         <div class="mb-3" style="font-size: 10px;">
-                              <?php echo $skin->deskripsi ?>
+                         <div class="mb-3">
+                              <ul class=" text-left">
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">Melindungi kulit wajah dari sinar UV.</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">memperbaiki warna kulit agar tetap cerah.</span></li>
+
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">segar (digunakan pada pagi dan siang hari).</span></li>
+                                   
+                              </ul>
                          </div>
-                         <div class="block"><a
-                                   target="_blank" href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
+                         <div class="block"><a href="https://api.whatsapp.com/send?phone=xxxx&amp;text="
                                    data-message="Saya ada tertarik dengan produk Body Spray Lotion. Apakah bisa dibantu?"
                                    id="wa-buy"
                                    class="member_mobilephone_themes_agen bg-blue-400 text-white active:bg-pink-600 font-bold  text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                    target="_blank">Beli Sekarang</a></div>
                     </div>
                </div>
-               <?php endforeach ?>
-               
+
+               <!-- 2  Facial Wash-->
+               <div class="card bg-card-light bg-cover bg-no-repeat flex  py-5   rounded-xl   mx-auto lg:mx-0  justify-between  gap-1 px-3 ">
+                    <div id="imageDisplay" class=" my-auto mx-auto">
+                         <img src="front_agen/img/FACIAL_WASH.png" class="mx-auto w-1/3 lg:w-2/4">
+                         <div class="text-center"><span
+                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.110.000</span>
+                         </div>
+                    </div>
+                    <div id="desc-wrapper mx-5">
+                         <div class="border-b-2 border-text-spot" style=" border-color: #8c4646;">
+                              <h1 class="font-ramaraja bold text-2xl font-roboto " style="color: white">GLOWZA BRIGHTENING FACIAL WASH</h1>
+                         </div>
+                         <h3 class="text-sm font-roboto py-1 text-white  font-semibold" style=" color: white">Manfaat
+                              produk:</h3>
+                         <div class="mb-3">
+                              <ul class=" text-left">
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">Membersihkan.</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">menghilangkan minyak berlebih.</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">melembutkn dan mencerahkan kulit wajah.</span></li>
+                                   
+                              </ul>
+                         </div>
+                         <div class="block"><a href="https://api.whatsapp.com/send?phone=xxxx&amp;text="
+                                   data-message="Saya ada tertarik dengan produk Body Spray Lotion. Apakah bisa dibantu?"
+                                   id="wa-buy"
+                                   class="member_mobilephone_themes_agen bg-blue-400 text-white active:bg-pink-600 font-bold  text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                   target="_blank">Beli Sekarang</a></div>
+                    </div>
+               </div>
+
+               <!-- 3  NIGHT CREAM-->
+               <div class="card bg-card-light bg-cover bg-no-repeat flex  py-5   rounded-xl   mx-auto lg:mx-0  justify-between  gap-1 px-3 ">
+                    <div id="imageDisplay" class=" my-auto mx-auto">
+                         <img src="front_agen/img/NIGHT_CREAM.png" class="mx-auto w-1/3 lg:w-2/4">
+                         <div class="text-center"><span
+                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.110.000</span>
+                         </div>
+                    </div>
+                    <div id="desc-wrapper mx-5">
+                         <div class="border-b-2 border-text-spot" style=" border-color: #8c4646;">
+                              <h1 class="font-ramaraja bold text-2xl font-roboto " style="color: white">GLOWZA NIGHT CREAM</h1>
+                         </div>
+                         <h3 class="text-sm font-roboto py-1 text-white  font-semibold" style=" color: white">Manfaat
+                              produk:</h3>
+                         <div class="mb-3">
+                              <ul class=" text-left">
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">Mencerahkan sekaligus memutihkan kulit wajah</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">mengurangi kerutan.</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">membantu mengatasu jerawat radang/ringan
+                                             pori</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">menyamarkan flek hitam.</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">memperbaiki warna kulit yang kurang merata ( digunakan pada malam hari ).</span></li>
+                                   
+                              </ul>
+                         </div>
+                         <div class="block"><a href="https://api.whatsapp.com/send?phone=xxxx&amp;text="
+                                   data-message="Saya ada tertarik dengan produk Body Spray Lotion. Apakah bisa dibantu?"
+                                   id="wa-buy"
+                                   class="member_mobilephone_themes_agen bg-blue-400 text-white active:bg-pink-600 font-bold  text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                   target="_blank">Beli Sekarang</a></div>
+                    </div>
+               </div>
+
+               <!-- 4  PAKET-->
+               <div class="card bg-card-light bg-cover bg-no-repeat flex  py-5   rounded-xl   mx-auto lg:mx-0  justify-between  gap-1 px-3 ">
+                    <div id="imageDisplay" class=" my-auto mx-auto">
+                         <img src="front_agen/img/PAKET.png" class="mx-auto w-1/3 lg:w-2/4">
+                         <div class="text-center"><span
+                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.110.000</span>
+                         </div>
+                    </div>
+                    <div id="desc-wrapper mx-5">
+                         <div class="border-b-2 border-text-spot" style=" border-color: #8c4646;">
+                              <h1 class="font-ramaraja bold text-2xl font-roboto " style="color: white">GLOWZA SKINCARE</h1>
+                         </div>
+                         <h3 class="text-sm font-roboto py-1 text-white  font-semibold" style=" color: white">Manfaat
+                              produk:</h3>
+                         <div class="mb-3">
+                              <ul class=" text-left">
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">Memutihkan / mencerahkan wajah.</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">Menghilangkan flek hitam.</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">Memberi kesan glowing
+                                             pori</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">Mengencangkan kulit.</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">Melembabkan kulit kering.</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">Mengecilkan pori pori.</span>
+                                   </li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">Membuat wajah kenyal dan awet muda.</span>
+                                   </li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">Menyamarkan kerutan di wajah.</span>
+                                   </li>
+                              </ul>
+                         </div>
+                         <div class="block"><a href="https://api.whatsapp.com/send?phone=xxxx&amp;text="
+                                   data-message="Saya ada tertarik dengan produk Body Spray Lotion. Apakah bisa dibantu?"
+                                   id="wa-buy"
+                                   class="member_mobilephone_themes_agen bg-blue-400 text-white active:bg-pink-600 font-bold  text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                   target="_blank">Beli Sekarang</a></div>
+                    </div>
+               </div>
 
 
-          </div>
+               <!-- 5  TONER-->
+               <div class="card bg-card-light bg-cover bg-no-repeat flex  py-5   rounded-xl   mx-auto lg:mx-0  justify-between  gap-1 px-3 ">
+                    <div id="imageDisplay" class=" my-auto mx-auto">
+                         <img src="front_agen/img/TONER.png" class="mx-auto w-1/3 lg:w-2/4">
+                         <div class="text-center"><span
+                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.110.000</span>
+                         </div>
+                    </div>
+                    <div id="desc-wrapper mx-5">
+                         <div class="border-b-2 border-text-spot" style=" border-color: #8c4646;">
+                              <h1 class="font-ramaraja bold text-2xl font-roboto " style="color: white">GLOWZA BRIGHTENING TONER</h1>
+                         </div>
+                         <h3 class="text-sm font-roboto py-1 text-white  font-semibold" style=" color: white">Manfaat
+                              produk:</h3>
+                         <div class="mb-3">
+                              <ul class=" text-left">
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">Menyegarkan mencerahkan.</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">mengangkat sel kulit mati.</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">mengecilkan pori-pori</span></li>
+                                   <li class="flex space-x-2 text-lg font-roboto"><svg class="w-6 h-6 "
+                                             style="color: #8c4646;" viewBox="0 0 24 24" fill="none"
+                                             stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                                  stroke-width="2"></path>
+                                        </svg> <span class="text-xs text-white ">menjaga kelembaban pada kulit wajah.</span></li>
+                                   
+                              </ul>
+                         </div>
+                         <div class="block"><a href="https://api.whatsapp.com/send?phone=xxxx&amp;text="
+                                   data-message="Saya ada tertarik dengan produk Body Spray Lotion. Apakah bisa dibantu?"
+                                   id="wa-buy"
+                                   class="member_mobilephone_themes_agen bg-blue-400 text-white active:bg-pink-600 font-bold  text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                   target="_blank">Beli Sekarang</a></div>
+                    </div>
+               </div>
+
+
           </div>
      </section>
 
@@ -277,9 +522,8 @@
                               <?php foreach ($this->db->get('testimoni')->result() as $moni): ?>
 
                               <!-- Slides -->
-                              <div class="swiper-slide"><img
-                                        src="image/testimoni/<?php echo $moni->foto ?>"
-                                        alt="" class="rounded-xl border-2 border-red-300 overflow-hidden"></div>
+                              <div class="swiper-slide"><img src="image/testimoni/<?php echo $moni->foto ?>" alt=""
+                                        class="rounded-xl border-2 border-red-300 overflow-hidden"></div>
                               <?php endforeach ?>
                          </div>
                          <!-- If we need pagination -->
@@ -305,7 +549,8 @@
                               Mudah banget loh, kamu hanya dengan order 3 paket Reseller, otomatis
                               kamu menjadi bagian dari Glowza Skincare
                          </p>
-                         <a target="_blank" href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
+                         <a target="_blank"
+                              href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
                               data-message="Saya ada tertarik dengan produk glowza. Apakah bisa dibantu?" id="wa-buy"
                               class="member_mobilephone_themes_agen bg-blue-400 text-white active:bg-pink-600 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                               Beli Sekarang
@@ -385,7 +630,7 @@
 
 
 
-     
+
 
 
 
