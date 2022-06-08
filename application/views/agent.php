@@ -194,7 +194,7 @@
                     <div id="imageDisplay" class=" my-auto mx-auto">
                          <img src="front_agen/img/DAY_CREAM.png" class="mx-auto w-1/3 lg:w-2/4">
                          <div class="text-center"><span
-                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.110.000</span>
+                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.120.000</span>
                          </div>
                     </div>
                     <div id="desc-wrapper mx-5">
@@ -240,7 +240,7 @@
                     <div id="imageDisplay" class=" my-auto mx-auto">
                          <img src="front_agen/img/FACIAL_WASH.png" class="mx-auto w-1/3 lg:w-2/4">
                          <div class="text-center"><span
-                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.110.000</span>
+                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.100.000</span>
                          </div>
                     </div>
                     <div id="desc-wrapper mx-5">
@@ -285,7 +285,7 @@
                     <div id="imageDisplay" class=" my-auto mx-auto">
                          <img src="front_agen/img/NIGHT_CREAM.png" class="mx-auto w-1/3 lg:w-2/4">
                          <div class="text-center"><span
-                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.110.000</span>
+                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.125.000</span>
                          </div>
                     </div>
                     <div id="desc-wrapper mx-5">
@@ -343,7 +343,7 @@
                     <div id="imageDisplay" class=" my-auto mx-auto">
                          <img src="front_agen/img/PAKET.png" class="mx-auto w-1/3 lg:w-2/4">
                          <div class="text-center"><span
-                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.110.000</span>
+                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.325.000</span>
                          </div>
                     </div>
                     <div id="desc-wrapper mx-5">
@@ -422,7 +422,7 @@
                     <div id="imageDisplay" class=" my-auto mx-auto">
                          <img src="front_agen/img/TONER.png" class="mx-auto w-1/3 lg:w-2/4">
                          <div class="text-center"><span
-                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.110.000</span>
+                                   class="price-right  border-2 text-white rounded-full px-2 py-2">Rp.100.000</span>
                          </div>
                     </div>
                     <div id="desc-wrapper mx-5">
