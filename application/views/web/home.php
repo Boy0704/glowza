@@ -325,6 +325,8 @@
                               <div class="col-sm-12">
                                    <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
                                    <div class="elfsight-app-93c857c9-9669-47f0-9cc4-3012d055a8c0"></div> -->
+                                   <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                                   <div class="elfsight-app-beb6e00f-efe0-4b08-8c8c-b7af8ead5b49"></div> -->
                                    <div class="embedsocial-hashtag" data-ref="d7a7e553f9af6982064da795d97f23eae44da8fa"><a class="feed-powered-by-es" href="https://embedsocial.com/social-media-aggregator/" target="_blank" title="Widget by EmbedSocial">Widget by EmbedSocial<span>→</span></a></div><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialHashtagScript"));</script>
                               </div>
                               <!-- Blog Activation End -->
@@ -342,10 +344,7 @@
                               <p>di google maps </p>
                          </div>
                          <div class="goole-map">
-                              <iframe
-                                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4959.109530986801!2d106.78786464251654!3d-6.264413151119323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1d2544fa117%3A0x6375849bf50d070d!2sGLOWZA%20SKINCARE!5e0!3m2!1sid!2sid!4v1653036538056!5m2!1sid!2sid"
-                                   width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                   referrerpolicy="no-referrer-when-downgrade"></iframe>
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15863.266654091754!2d107.8815267!3d-6.2878133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x623c131d4330bfa9!2sGLOWZA%20LALA%20Boutique!5e0!3m2!1sid!2sid!4v1654685148671!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                          </div>
                     </section>
 

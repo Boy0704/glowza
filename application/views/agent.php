@@ -487,7 +487,7 @@
                          <h1 class="text-xl md:text-2xl text-red-300 font-roboto font-semibold text-center">Terbuat Dari
                               Bahan Alami</h1>
                          <p class="text-center text-base">Setiap produk justmint beauty terbuat dari bahan-bahan alami
-                              yang sudah
+                              yang sudah <br>
                               teruji baik untuk kulit</p>
                     </div>
                     <div class="flex gap-2 flex-col items-center w-3/4 px-5 mx-auto py-4"><img
@@ -497,14 +497,14 @@
                               Efek Samping</h1>
                          <p class="text-center text-base">Semua produk Glowza Skincare Tidak menyebabkan efek samping
                               seperti
-                              merah-merah/iritasi kulit & pengelupasan</p>
+                              merah-merah/ iritasi kulit & pengelupasan</p>
                     </div>
                     <div class="flex gap-2 flex-col items-center w-3/4 px-5 mx-auto py-4"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Checked.png"
                               class="w-16">
                          <h1 class="text-xl md:text-2xl text-red-300 font-roboto font-semibold text-center">Mendapatkan
                               Izin BPOM</h1>
-                         <p class="text-center text-base">Semua produk Glowza Skincare sudah mendapatkan Ijin BPOM dan
+                         <p class="text-center text-base">Semua produk Glowza Skincare sudah mendapatkan Ijin BPOM dan <br>
                               memiliki ijin
                               edar</p>
                     </div>
@@ -578,52 +578,62 @@
                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-3 gap-2 py-10">
                     <li class="flex text-lg font-roboto"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
-                              class="w-10 h-6 pr-5">Uang Tunai 300k
+                              class="w-10 h-6 pr-5">Emas 1 Gram
                     </li>
                     <li class="flex text-lg font-roboto"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
-                              class="w-10 h-6 pr-5">Uang Tunai 600k
+                              class="w-10 h-6 pr-5">Emas 2 Gram
                     </li>
                     <li class="flex text-lg font-roboto"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
-                              class="w-10 h-6 pr-5">Uang Tunai
-                         3000k</li>
+                              class="w-10 h-6 pr-5">Emas 3 Gram</li>
                     <li class="flex text-lg font-roboto"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
-                              class="w-10 h-6 pr-5">Smartphone/Uang
-                         Tunai 4500k</li>
+                              class="w-10 h-6 pr-5">Tv 42 inch</li>
                     <li class="flex text-lg font-roboto"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
-                              class="w-10 h-6 pr-5">Uang Tunai
-                         5994k</li>
+                              class="w-10 h-6 pr-5">Hp Samsung Type A </li>
                     <li class="flex text-lg font-roboto"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
-                              class="w-10 h-6 pr-5">Tour Turkey
-                         atau Dubai</li>
+                              class="w-10 h-6 pr-5">Laptop</li>
                     <li class="flex text-lg font-roboto"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
-                              class="w-10 h-6 pr-5">Tour Malaysia
-                         atau Singapura</li>
+                              class="w-10 h-6 pr-5">Ipad Pro</li>
                     <li class="flex text-lg font-roboto"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
-                              class="w-10 h-6 pr-5">1 Unit Motor
-                         Honda Beat</li>
+                              class="w-10 h-6 pr-5">Iphone 12</li>
                     <li class="flex text-lg font-roboto"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
-                              class="w-10 h-6 pr-5">Ibadah Umrah
-                    </li>
+                              class="w-10 h-6 pr-5">Camera Canon EOS</li>
                     <li class="flex text-lg font-roboto"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
                               class="w-10 h-6 pr-5">Mobil Senilai
                          120 Juta</li>
                     <li class="flex text-lg font-roboto"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
-                              class="w-10 h-6 pr-5">1 Unit Mobil
-                         Xpander</li>
+                              class="w-10 h-6 pr-5">Motor Honda Beat</li>
                     <li class="flex text-lg font-roboto"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
-                              class="w-10 h-6 pr-5">Rumah Idaman
-                         Senilai 600 Juta</li>
+                              class="w-10 h-6 pr-5">Motor Yamaha Lexy</li>
+                    <li class="flex text-lg font-roboto"><img
+                              src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
+                              class="w-10 h-6 pr-5">Motor Honda PCX</li>
+                    <li class="flex text-lg font-roboto"><img
+                              src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
+                              class="w-10 h-6 pr-5">Mobil Daihatsu Alya</li>
+                    <li class="flex text-lg font-roboto"><img
+                              src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
+                              class="w-10 h-6 pr-5">Mobil Honda Brio</li>
+                    <li class="flex text-lg font-roboto"><img
+                              src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
+                              class="w-10 h-6 pr-5">Ibadah Umroh</li>
+                    <li class="flex text-lg font-roboto"><img
+                              src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
+                              class="w-10 h-6 pr-5">Tour Turkey atau Dubai</li>
+                    <li class="flex text-lg font-roboto"><img
+                              src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/logo-archive.png"
+                              class="w-10 h-6 pr-5">Tour Malaysia atau Singapore</li>
+
                </ul>
           </div>
      </section>
