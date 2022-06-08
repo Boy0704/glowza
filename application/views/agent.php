@@ -33,20 +33,19 @@
                               </div>
                               <div class="w-8/12 lg:w-7/12 px-2 text-left">
                                    <h1 class="text-red-300  text-3xl md:text-5xl font-ramaraja">
-                                        2 Minggu Atasi Flek Menahun Jadikan Wajah Cerah Glowing Merona
+                                        Atasi Wajah Kusammu dengan Glowza, Jadikan Wajah Cerah Glowing Bersih dan Sehat
                                    </h1>
                                    <p class="mt-4 text-base md:text-lg text-gray-800 font-roboto font-semibold">
-                                        Skincare berkualitas terbaik di dunia dan ribuan wanita telah
-                                        membuktikan!
+                                        Skincare berkualitas terbaik di dunia!
                                    </p>
                               </div>
                               <div id="button" class="mt-10 my-2  flex flex-wrap gap-2">
-                                   <a target="_blank"
+                                   <a style="color:  white;background-color:#CC9C27;" target="_blank"
                                         href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
                                         data-message="Saya ada tertarik dengan produk glowza. Apakah bisa dibantu?"
                                         class="member_mobilephone_themes_agen bg-blue-400 text-white active:bg-pink-600 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         id="wa-buy"><span class="text-xs" id="wa-buy">Beli Sekarang</span></a>
-                                   <a target="_blank"
+                                   <a style="color:  white;background-color:#CC9C27;" target="_blank"
                                         href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
                                         data-message="Saya tertarik bergabung dengan glowza. Apakah bisa dibantu?"
                                         class="member_mobilephone_themes_agen bg-green-400 text-white active:bg-pink-600 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -103,12 +102,12 @@
                                    </div>
                                    <div>
                                         <h4 class="font-roboto lg:text-xl md:text-base text-xs">
-                                             Flek hitam yang tak hilang-hilang
+                                             Wajah hitam yang tidak bereseri
                                         </h4>
                                    </div>
                               </div>
                          </li>
-                         <li class="py-2  rounded-xl border-2 "
+                         <li class="py-2 rounded-xl border-2 "
                               style="background-color: #fcf7f8; border-color: #CC9C27;">
                               <div class="flex items-center gap-5 ml-5">
                                    <div>
@@ -121,12 +120,12 @@
                                    </div>
                                    <div>
                                         <h4 class="font-roboto lg:text-xl md:text-base text-xs">
-                                             Flek Hitam malah semakin tebal
+                                             Tidak percaya diri karena wajah kusam dan Cerah
                                         </h4>
                                    </div>
                               </div>
                          </li>
-                         <li class="py-2  rounded-xl border-2 "
+                         <li class="py-2 rounded-xl border-2 "
                               style="background-color: #fcf7f8; border-color: #CC9C27;">
                               <div class="flex items-center gap-5 ml-5">
                                    <div>
@@ -139,7 +138,43 @@
                                    </div>
                                    <div>
                                         <h4 class="font-roboto lg:text-xl md:text-base text-xs">
-                                             Selalu tumbuh jerawat di wajah
+                                             Flek Hitam yang susah menghilang
+                                        </h4>
+                                   </div>
+                              </div>
+                         </li>
+                         <li class="py-2 rounded-xl border-2 "
+                              style="background-color: #fcf7f8; border-color: #CC9C27;">
+                              <div class="flex items-center gap-5 ml-5">
+                                   <div>
+                                        <svg class="w-6 h-6 text-red-300" fill="currentColor" viewBox="0 0 20 20"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd"
+                                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                  clip-rule="evenodd"></path>
+                                        </svg>
+                                   </div>
+                                   <div>
+                                        <h4 class="font-roboto lg:text-xl md:text-base text-xs">
+                                             Jerawat yang membandel di wajah
+                                        </h4>
+                                   </div>
+                              </div>
+                         </li>
+                         <li class="py-2 rounded-xl border-2 "
+                              style="background-color: #fcf7f8; border-color: #CC9C27;">
+                              <div class="flex items-center gap-5 ml-5">
+                                   <div>
+                                        <svg class="w-6 h-6 text-red-300" fill="currentColor" viewBox="0 0 20 20"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd"
+                                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                  clip-rule="evenodd"></path>
+                                        </svg>
+                                   </div>
+                                   <div>
+                                        <h4 class="font-roboto lg:text-xl md:text-base text-xs">
+                                             Kulit wajah yang berkerutan
                                         </h4>
                                    </div>
                               </div>
@@ -162,12 +197,7 @@
                     <p
                          class="
               text-white font-roboto md:text-xl sm:text-lg text-xs leading-normal overflow-x-hidden md:text-center text-justify">
-                         Glowza Skincare adalah serangkaian perawatan kulit harian (Daily
-                         Skin care) mengambil manfaat terbaik dari alam kemudian
-                         diformulasikan secara khusus dan teruji secara dermatologist yang
-                         telah memiliki sertifikasi halal dan BPOM sehingga cocok untuk
-                         kulit daerah tropis, menjadi kunci penting dalam menjaga kesehatan
-                         kulit.
+                         Glowza Skincare merupakan serangkaian perawatan kulit harian anda, di formulasikan secara khusus dan teruji secara dermatologist untuk solusi segala permasalahan kulit anda, yang telah memiliki sertifikasi BPOM sehingga sudah teruji dan aman digunakan setiap harinya, untuk kulit wajah anda.
                     </p>
                </div>
                <img src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Asset-39.png"
@@ -183,10 +213,8 @@
                </p>
                <p style="color: #8c4646;" class="font-ramaraja ext-center text-2xl md:text-2xl my-1 uppercase">
                     "Spesialist Flek Menahun" </p>
-               <p style="color: #CC9C27;" class="font-ramaraja text-center text-lg  md:text-3xl">Bukan tanpa alasan
-                    tetapi suda ribuan orang </p>
-               <p style="color: #CC9C27;" class="font-ramaraja text-center text-lg  md:text-3xl"> membuktikan kehebatan
-                    produk Glowza Skincare</p>
+               <p style="color: #CC9C27;" class="font-ramaraja text-center text-lg  md:text-3xl">Sudah ribuan orang membuktikan Keunggulan & Kehebatan produk dari Glowza Skincare </p>
+               <p style="color: #CC9C27;" class="font-ramaraja text-center text-lg  md:text-3xl"> Jadi sudah tidak perlu diragukan lagi keunggulan dan khasiat dari produk kami</p>
           </div>
           <div style="width: 90vw;" class=" displayCard  gap-5 grid lg:mx-auto">
                <!-- 1  Day Cream-->
@@ -484,11 +512,8 @@
                     <div class="flex gap-2 flex-col items-center w-3/4 px-5 mx-auto py-4"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Alami.png"
                               class="w-16">
-                         <h1 class="text-xl md:text-2xl text-red-300 font-roboto font-semibold text-center">Terbuat Dari
-                              Bahan Alami</h1>
-                         <p class="text-center text-base">Setiap produk justmint beauty terbuat dari bahan-bahan alami
-                              yang sudah <br>
-                              teruji baik untuk kulit</p>
+                         <h1 class="text-xl md:text-2xl text-red-300 font-roboto font-semibold text-center">Terbuat dari Bahan Berkualitas dan Pilihan</h1>
+                         <p class="text-center text-base">Semua produk Glowza Skincare terbuat dari bahan - bahan pilihan dan berkualitas yang sudah <br> terbukti terbaik <br> untuk kulit</p>
                     </div>
                     <div class="flex gap-2 flex-col items-center w-3/4 px-5 mx-auto py-4"><img
                               src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/Person.png"
@@ -546,8 +571,7 @@
                               Ingin menjadi bagian dari kami atau menjadi mitra Glowza Skincare?
                          </h3>
                          <p class="text-lg font-roboto leading-relaxed mt-4 mb-4 text-gray-700 text-left mb-7">
-                              Mudah banget loh, kamu hanya dengan order 3 paket Reseller, otomatis
-                              kamu menjadi bagian dari Glowza Skincare
+                              Mudah banget loh, kamu hanya order 5 Paket Reseller atau sesuai nominal yang sudah ditentukan
                          </p>
                          <a target="_blank"
                               href="https://api.whatsapp.com/send?phone=+62<?php echo $no_telp ?>&amp;text="
