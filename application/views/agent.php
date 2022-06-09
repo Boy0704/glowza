@@ -74,21 +74,21 @@
      </section>
 
 
-     <section id="section_2" class=" mx-auto px-5 w-full sm:w-11/12 my-10">
+     <section id="section_2" class="mx-auto px-5 w-full sm:w-11/12 my-10">
           <div class=" grid grid-cols-2 grid-rows-2 mx-auto">
 
                <div class="my-auto sm:mx-auto w-44 md:w-10/12  px-4 lg:row-span-2 row-span-1 ">
                     <img alt="..." class="max-w-full mx-auto rounded-lg shadow-lg"
                          src="front_agen/themes/front/bba/modules/replica/f_replica/replica/agen/static/images/foto-1-fix-1982x2048.jpg" />
                </div>
-               <div class=" pt-4 sm:pl-0 lg:my-auto">
+               <div class="pt-4 sm:pl-0 lg:my-auto" style="margin-top: 50px;">
                     <h3 class="text-xl sm:text-3xl  md:text-4xl text-left text-red-300 font-ramaraja">
                          Sudah kehilangan banyak uang dan waktu untuk mengilangkan
                          masalah ini?
                     </h3>
                </div>
                <div class="col-span-2 lg:col-span-1 w-full lg:w-full mx-auto">
-                    <ul class="list-none mt-6 space-y-5">
+                    <ul class="list-none space-y-2">
                          <li class="py-2 rounded-xl border-2 "
                               style="background-color: #fcf7f8; border-color: #CC9C27;">
                               <div class="flex items-center gap-5 ml-5">
@@ -179,6 +179,7 @@
                                    </div>
                               </div>
                          </li>
+                         
                     </ul>
                </div>
           </div>
@@ -209,10 +210,10 @@
      <section id="section_4" class="my-20 w-full bg-cover ">
           <div class="text-center my-8 mx-auto container ">
 
-               <p style="color: #CC9C27;" class="font-ramaraja text-center text-lg  md:text-3xl ">Mereka menyebut kami
+               <!-- <p style="color: #CC9C27;" class="font-ramaraja text-center text-lg  md:text-3xl ">Mereka menyebut kami
                </p>
                <p style="color: #8c4646;" class="font-ramaraja ext-center text-2xl md:text-2xl my-1 uppercase">
-                    "Spesialist Flek Menahun" </p>
+                    "Spesialist Flek Menahun" </p> -->
                <p style="color: #CC9C27;" class="font-ramaraja text-center text-lg  md:text-3xl">Sudah ribuan orang membuktikan Keunggulan & Kehebatan produk dari Glowza Skincare </p>
                <p style="color: #CC9C27;" class="font-ramaraja text-center text-lg  md:text-3xl"> Jadi sudah tidak perlu diragukan lagi keunggulan dan khasiat dari produk kami</p>
           </div>
