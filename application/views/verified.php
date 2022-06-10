@@ -51,17 +51,18 @@
 								  $data = $this->db->get_where('member', ['kode_member' => $kode_member])->row();
 								 ?>
 								<div class="row">
-									<div class="col-sm-6">
-										<img src="assets/verified/header.png" class="img-fluid" alt="logo icon">
+									<div class="col-sm-10">
+										<img src="assets/verified/header.png" style="height: 80px;" class="img-fluid" alt="logo icon">
 									</div>
-									<div class="col-sm-6">
-										<!-- <img src="assets/verified/logo.png" class="logo-icon" alt="logo icon"> -->
+									<div class="col-sm-2">
+										<img src="assets/verified/logo.png" style="height: 100px; width: 80px; text-align: right;" class="logo-icon" alt="logo icon">
 									</div>
 								</div>
 								<div class="row" style="margin-top: 20px; margin-left: 10px;">
 									<div class="col-sm-8">
 										<div class="col-sm-12">
-											<h2>Akun ini sudah terverifikasi.</h2>
+											<h2><?php echo $data->nama_lengkap ?></h2>
+											<h5>Telah terdaftar resmi sebagai <span style="color: blue;"><?php echo strtoupper($data->level) ?></span> resmi Glowza.</h5>
 										</div>
 										<div class="col-sm-12" style="margin-top: 10px;">
 											<table>
