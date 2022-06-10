@@ -223,7 +223,7 @@
                     </a>
                     <ul>
                          <li> <a href="app/log_point"><i class="bx bx-right-arrow-alt"></i>History Point</a>
-                         <li> <a href="app/dev"><i class="bx bx-right-arrow-alt"></i>History Pembelian</a>
+                         <!-- <li> <a href="app/dev"><i class="bx bx-right-arrow-alt"></i>History Pembelian</a> -->
                         
                     </ul>
                </li>
