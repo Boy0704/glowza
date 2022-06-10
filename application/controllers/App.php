@@ -261,12 +261,6 @@ class App extends CI_Controller {
     public function simpan_pendaftaran() 
     {
           $kode_member = kode_member();
-        $this->_rules();
-
-        if ($this->form_validation->run() == FALSE) {
-            $this->pendaftaran();
-        } else {
-
                $foto = upload_gambar_biasa('user', 'image/user/', 'jpg|png|jpeg', 10000, 'foto');
           $foto_identitas = upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_indentitas');
 
@@ -301,7 +295,7 @@ class App extends CI_Controller {
             $this->qrcode($kode_member);
             $this->session->set_flashdata('pesan', alert_biasa('Pendaftaran Berhasil','success'));
                redirect("app/pendaftaran");
-        }
+        
     }
 
      public function profil()
