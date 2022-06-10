@@ -193,6 +193,13 @@
                     </a>
                </li>
                <li>
+                    <a href="app/pembelian">
+                         <div class="parent-icon"><i class='bx bx-cloud-upload'></i>
+                         </div>
+                         <div class="menu-title">Input Pembelian</div>
+                    </a>
+               </li>
+               <li>
                     <a href="app/pendaftaran">
                          <div class="parent-icon"><i class='bx bx-user-check'></i>
                          </div>
@@ -227,6 +234,7 @@
                         
                     </ul>
                </li>
+               <li class="menu-label" onclick="alert('Silahkan berikan masukkan dan saran anda kepada kami !')">Aplikasi Versi Beta</li>
                
           <?php endif ?>
      </ul>

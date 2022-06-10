@@ -193,7 +193,7 @@
                                                                            <td><i class="fa fa-facebook"></i></td>
                                                                            <td>&nbsp;&nbsp;</td>
                                                                            <td>
-                                                                                <a href="<?php echo $row->facebook ?>"><?php echo $row->facebook ?></a>
+                                                                                <a href="https://www.facebook.com/<?php echo $row->facebook ?>"><?php echo $row->facebook ?></a>
                                                                            </td>
                                                                       </tr>
                                                                       <tr>
@@ -213,7 +213,7 @@
                                                                            <td>&nbsp;&nbsp;</td>
                                                                            <td>
                                                                                 <a
-                                                                                     href="<?php echo $row->instagram ?>"><?php echo $row->instagram ?></a>
+                                                                                     href="https://www.instagram.com/<?php echo $row->instagram ?>"><?php echo $row->instagram ?></a>
                                                                                 <!-- <a href="https://www.instagram.com/ms.glow_beautycare05/">ms.glow_beautycare05</a> -->
                                                                            </td>
                                                                       </tr>
