@@ -193,7 +193,7 @@
                     </a>
                </li>
                <li>
-                    <a href="javascript();">
+                    <a href="javascript:void(0)">
                          <div class="parent-icon"><i class='bx bx-cloud-upload'></i>
                          </div>
                          <div class="menu-title">Input Pembelian</div>
