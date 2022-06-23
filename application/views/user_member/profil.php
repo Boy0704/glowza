@@ -216,9 +216,9 @@ $member = $this->db->get('member')->row();
                                    <select id="provinsi" class="single-select" onchange="getKabupaten()" required>
                                         <option value="">Pilih Provinsi</option>
                                         <?php 
-                                        $selected = "";
                                         $id_provinsi = get_data('regencies','id',$member->id_kabupaten,'province_id'); 
                                         foreach ($this->db->get('provinces')->result() as $rw) :
+                                             $selected = "";
                                              if ($id_provinsi == $rw->id) {
                                                   $selected = "selected";
                                              }
