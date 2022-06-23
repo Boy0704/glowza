@@ -215,8 +215,15 @@ $member = $this->db->get('member')->row();
                               <div class="col-sm-9">
                                    <select id="provinsi" class="single-select" onchange="getKabupaten()" required>
                                         <option value="">Pilih Provinsi</option>
-                                        <?php foreach ($this->db->get('provinces')->result() as $rw) : ?>
-                                        <option value="<?php echo $rw->id ?>"><?php echo $rw->name ?></option>
+                                        <?php 
+                                        $selected = "";
+                                        $id_provinsi = get_data('regencies','id',$member->id_kabupaten,'province_id'); 
+                                        foreach ($this->db->get('provinces')->result() as $rw) :
+                                             if ($id_provinsi == $rw->id) {
+                                                  $selected = "selected";
+                                             }
+                                         ?>
+                                        <option value="<?php echo $rw->id ?>" <?php echo $selected ?>><?php echo $rw->name ?></option>
                                         <?php endforeach ?>
                                    </select>
                               </div>
