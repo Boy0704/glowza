@@ -377,7 +377,7 @@ class App extends CI_Controller {
           'level' => $this->input->post('level',TRUE),
           'updated_at' => get_waktu(),
          );
-
+          $this->load->model('Member_model');
             $this->Member_model->update($id_member, $data);
             $this->session->set_flashdata('pesan', alert_biasa('Profil Berhasil diubah','success'));
                redirect("app/profil");
