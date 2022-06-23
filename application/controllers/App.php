@@ -349,11 +349,11 @@ class App extends CI_Controller {
 
      public function update_profil($id_member) 
      {
-        $this->_rules();
+        // $this->_rules();
 
-        if ($this->form_validation->run() == FALSE) {
-            $this->profil($id_member);
-        } else {
+        // if ($this->form_validation->run() == FALSE) {
+        //     $this->profil($id_member);
+        // } else {
             $data = array(
           'kode_member' => $this->input->post('kode_member',TRUE),
           'nama_lengkap' => $this->input->post('nama_lengkap',TRUE),
@@ -381,7 +381,7 @@ class App extends CI_Controller {
             $this->Member_model->update($id_member, $data);
             $this->session->set_flashdata('pesan', alert_biasa('Profil Berhasil diubah','success'));
                redirect("app/profil");
-        }
+        // }
      }
 
      public function dev()
