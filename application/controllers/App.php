@@ -262,7 +262,7 @@ class App extends CI_Controller {
     {
           $kode_member = kode_member();
                $foto = upload_gambar_biasa('user', 'image/user/', 'jpg|png|jpeg', 10000, 'foto');
-          $foto_identitas = upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_indentitas');
+          $foto_identitas = upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_identitas');
 
             $data = array(
           'kode_member' => $kode_member,
@@ -352,7 +352,7 @@ class App extends CI_Controller {
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
-            $this->update($this->input->post('id_member', TRUE));
+            $this->profil($id_member);
         } else {
             $data = array(
           'kode_member' => $this->input->post('kode_member',TRUE),

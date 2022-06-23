@@ -91,7 +91,7 @@ class Member extends CI_Controller
         } else {
 
         	$foto = upload_gambar_biasa('user', 'image/user/', 'jpg|png|jpeg', 10000, 'foto');
-          $foto_identitas = upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_indentitas');
+          $foto_identitas = upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_identitas');
 
             $data = array(
 		'kode_member' => $this->input->post('kode_member',TRUE),
@@ -211,7 +211,7 @@ class Member extends CI_Controller
 		'level' => $this->input->post('level',TRUE),
 		'updated_at' => get_waktu(),
 		'foto' => $retVal = ($_FILES['foto']['name'] == '') ? $_POST['foto_old'] : upload_gambar_biasa('user', 'image/user/', 'jpeg|png|jpg|gif', 10000, 'foto'),
-		'foto_identitas' => $retVal = ($_FILES['foto_identitas']['name'] == '') ? $_POST['foto_identitas_old'] : upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_indentitas'),
+		'foto_identitas' => $retVal = ($_FILES['foto_identitas']['name'] == '') ? $_POST['foto_identitas_old'] : upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_identitas'),
 	    );
 
             $this->Member_model->update($this->input->post('id_member', TRUE), $data);
