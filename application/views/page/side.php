@@ -35,6 +35,13 @@
                     </a>
                </li>
                <li>
+                    <a href="order">
+                         <div class="parent-icon"><i class='bx bx-cart-alt'></i>
+                         </div>
+                         <div class="menu-title">Order Pembelian</div>
+                    </a>
+               </li>
+               <li>
                     <a class="has-arrow" href="javascript:;">
                          <div class="parent-icon"> <i class="bx bx-chevrons-right"></i>
                          </div>
@@ -193,7 +200,7 @@
                     </a>
                </li>
                <li>
-                    <a href="javascript:void(0)">
+                    <a href="order">
                          <div class="parent-icon"><i class='bx bx-cloud-upload'></i>
                          </div>
                          <div class="menu-title">Input Pembelian</div>
