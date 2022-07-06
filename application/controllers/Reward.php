@@ -22,6 +22,14 @@ class Reward extends CI_Controller
         $this->load->view('v_index', $data);
     }
 
+    public function hapus($id_klaim)
+    {
+        $this->db->where('id_klaim', $id_klaim);
+        $this->db->delete('klaim_reward');
+        $this->session->set_flashdata('message', message('success','behasil hapus Pengajuan klaim'));
+            redirect(site_url('reward/klaim_reward'));
+    }
+
     public function approved($n, $id_klaim)
     {
         if ($n == 'y') {

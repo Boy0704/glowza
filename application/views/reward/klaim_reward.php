@@ -51,7 +51,7 @@
                                    </a>
 
                                    <?php endif ?>
-                                   <a href="reward/delete/<?php echo $row->id_klaim ?>" title="hapus"
+                                   <a href="reward/hapus/<?php echo $row->id_klaim ?>" title="hapus"
                                         onclick="javasciprt: return confirm('Yakin akan hapus klaim reward ini ?')"
                                         class="btn btn-sm btn-danger">Hapus
                                    </a>
