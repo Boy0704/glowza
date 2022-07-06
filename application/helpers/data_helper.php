@@ -6,7 +6,7 @@ function point_saya($id_member)
 	$sql = $CI->db->query("SELECT ( sum(point_in) - sum(point_out) ) as total FROM log_point WHERE id_member='$id_member' ");
 	$total = $sql->row()->total;
 	if ($total == '') {
-		return "0";
+		return 0;
 	} else {
 		return $total;
 	}

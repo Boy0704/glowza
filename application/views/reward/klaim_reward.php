@@ -30,7 +30,7 @@
                          <tr>
                               <td width="80px"><?php echo $no ?></td>
                               <td><?php echo get_data('member','id_member',$row->id_member,'nama_lengkap') ?></td>
-                              <td><?php point_saya($row->id_member) ?></td>
+                              <td><?php echo point_saya($row->id_member) ?></td>
                               <td><?php echo get_data('reward','id_reward',$row->id_reward,'deskripsi') ?></td>
                               <td>
                                    <?php 
@@ -53,7 +53,7 @@
                                    <?php endif ?>
                                    <a href="reward/delete/<?php echo $row->id_klaim ?>" title="hapus"
                                         onclick="javasciprt: return confirm('Yakin akan hapus klaim reward ini ?')"
-                                        class="btn btn-sm btn-danger"><i class="bx bx-check-double me-0"></i> Hapus
+                                        class="btn btn-sm btn-danger">Hapus
                                    </a>
 
                               </td>
