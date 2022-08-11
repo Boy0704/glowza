@@ -313,10 +313,31 @@ class App extends CI_Controller {
 
      public function update_foto($id_member)
      {
+          $foto_identitas = "";
           $foto = upload_gambar_biasa('user', 'image/user/', 'jpg|png|jpeg', 10000, 'foto');
-          if ($foto) {
-               $foto_identitas = upload_gambar_biasa1('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_identitas');
-          }
+          //upload ktp
+          $nmfile = "identitas_".time();
+          $config['upload_path'] = './image/ktp/';
+          $config['allowed_types'] = 'jpg|png|jpeg';
+          $config['max_size'] = 10000;
+          $config['file_name'] = $nmfile;
+          // load library upload
+          $this->load->library('upload', $config);
+          // upload gambar 1
+          if ( ! $this->upload->do_upload('foto_identitas')) {
+               ?>
+               <script type="text/javascript">
+                    alert("<?php echo $this->upload->display_errors() ?>");
+                    window.location="<?php echo base_url() ?>app/profil";
+               </script>
+               <?php
+          } else {
+              $result1 = $this->upload->data();
+              $result = array('gambar'=>$result1);
+              $dfile = $result['gambar']['file_name'];
+              
+              $foto_identitas = $dfile;
+          }    
           
 
           $this->db->where('id_member', $id_member);
