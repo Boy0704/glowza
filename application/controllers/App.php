@@ -314,7 +314,7 @@ class App extends CI_Controller {
      public function update_foto($id_member)
      {
           $foto = upload_gambar_biasa('user', 'image/user/', 'jpg|png|jpeg', 10000, 'foto');
-          $foto_identitas = upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_indentitas');
+          $foto_identitas = upload_gambar_biasa('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_identitas');
 
           $this->db->where('id_member', $id_member);
           $this->db->update('member', array(
