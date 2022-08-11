@@ -315,8 +315,8 @@ class App extends CI_Controller {
      {
           $this->db->where('id_member', $id_member);
           $this->db->update('member', array(
-               'foto' => upload_gambar_biasa('user', 'image/user/', 'jpg|png|jpeg', 10000, 'foto');,
-               'foto_identitas' => upload_gambar_biasa1('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_identitas');
+               'foto' => upload_gambar_biasa('user', 'image/user/', 'jpg|png|jpeg', 10000, 'foto'),
+               'foto_identitas' => upload_gambar_biasa1('identitas', 'image/ktp/', 'jpg|png|jpeg', 10000, 'foto_identitas')
           ));
           $this->session->set_flashdata('pesan', alert_biasa('Foto berhasil diupdate','success'));
           redirect("app/profil");
