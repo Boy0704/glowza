@@ -323,6 +323,7 @@ class App extends CI_Controller {
           $config['file_name'] = $nmfile;
           // load library upload
           $this->load->library('upload', $config);
+          $this->upload->initialize($config);
           // upload gambar 1
           if ( ! $this->upload->do_upload('foto_identitas')) {
                ?>
